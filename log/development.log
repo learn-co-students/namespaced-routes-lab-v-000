@@ -1595,3 +1595,1920 @@ Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.6ms)
 
 
 Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-01 19:18:02 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "The Killers"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 1], ["title", "Mr. Brightside"], ["created_at", "2016-02-03 21:46:20.446804"], ["updated_at", "2016-02-03 21:46:20.446804"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "The Killers"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 1], ["title", "Jenny Was a Friend of Mine"], ["created_at", "2016-02-03 21:46:20.450030"], ["updated_at", "2016-02-03 21:46:20.450030"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Tommy Tutone"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 2], ["title", "Jenny"], ["created_at", "2016-02-03 21:46:20.452413"], ["updated_at", "2016-02-03 21:46:20.452413"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Daft Punk"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 3], ["title", "Around the World"], ["created_at", "2016-02-03 21:46:20.455185"], ["updated_at", "2016-02-03 21:46:20.455185"]]
+  [1m[36m (0.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Daft Punk"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 3], ["title", "Harder, Better, Faster, Stronger"], ["created_at", "2016-02-03 21:46:20.457949"], ["updated_at", "2016-02-03 21:46:20.457949"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Where is My Mind?"], ["created_at", "2016-02-03 21:46:20.460628"], ["updated_at", "2016-02-03 21:46:20.460628"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Gigantic"], ["created_at", "2016-02-03 21:46:20.463057"], ["updated_at", "2016-02-03 21:46:20.463057"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Monkey Gone to Heaven"], ["created_at", "2016-02-03 21:46:20.465527"], ["updated_at", "2016-02-03 21:46:20.465527"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/artists" for ::1 at 2016-02-03 17:20:56 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 260ms (Views: 255.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/artists/1/songs" for ::1 at 2016-02-03 17:21:00 -0500
+Processing by SongsController#index as HTML
+  Parameters: {"artist_id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?  [["artist_id", 1]]
+  Rendered songs/index.html.erb within layouts/application (16.6ms)
+Completed 200 OK in 63ms (Views: 27.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/songs/10" for ::1 at 2016-02-03 17:22:11 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs/10" for ::1 at 2016-02-03 17:22:14 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"10"}
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1[0m  [["id", 10]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered songs/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs/new" for ::1 at 2016-02-03 17:23:27 -0500
+Processing by SongsController#new as HTML
+  Rendered songs/new.html.erb within layouts/application (31.9ms)
+Completed 200 OK in 40ms (Views: 39.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/songs" for ::1 at 2016-02-03 17:23:32 -0500
+Processing by SongsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"aqdvsaXu0aAtjqOMXtNY/dH6BRFdUWmKl4qljchicu9JgiVXXF8PnNI49iR05chmpsnhhB6SH9YSDC34sPsgfA==", "song"=>{"title"=>"Swag ", "artist_name"=>""}, "commit"=>"Create Song"}
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", ""]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", ""], ["created_at", "2016-02-03 22:23:32.386128"], ["updated_at", "2016-02-03 22:23:32.386128"]]
+  [1m[35m (0.8ms)[0m  commit transaction
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("title", "artist_id", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["title", "Swag "], ["artist_id", 5], ["created_at", "2016-02-03 22:23:32.389486"], ["updated_at", "2016-02-03 22:23:32.389486"]]
+  [1m[36m (0.8ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/songs/17
+Completed 302 Found in 11ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/songs/17" for ::1 at 2016-02-03 17:23:32 -0500
+Processing by SongsController#show as HTML
+  Parameters: {"id"=>"17"}
+  [1m[35mSong Load (0.1ms)[0m  SELECT  "songs".* FROM "songs" WHERE "songs"."id" = ? LIMIT 1  [["id", 17]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered songs/show.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-03 17:23:34 -0500
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-03 17:23:43 -0500
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  [1m[36mArtist Load (0.9ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mSong Load (0.3ms)[0m  SELECT  "songs".* FROM "songs"  ORDER BY "songs"."id" DESC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "songs".* FROM "songs"  ORDER BY "songs"."id" DESC LIMIT 1[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 5]]
+
+
+Started GET "/songs" for ::1 at 2016-02-03 17:24:57 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+  [1m[36mArtist Load (0.4ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+
+
+Started GET "/songs" for ::1 at 2016-02-03 17:25:43 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (39.7ms)
+Completed 200 OK in 253ms (Views: 248.0ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/admin" for ::1 at 2016-02-03 17:26:02 -0500
+
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (10.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (104.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (64.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (133.9ms)
+
+
+Started GET "/admin" for ::1 at 2016-02-03 23:55:56 -0500
+
+ActionController::RoutingError (No route matches [GET] "/admin"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.9ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (101.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.9ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (128.2ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-03 23:56:00 -0500
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.6ms)[0m  SELECT "songs".* FROM "songs"
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (36.0ms)
+Completed 200 OK in 54ms (Views: 49.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/admin_settings_index_path" for ::1 at 2016-02-04 00:02:00 -0500
+
+ActionController::RoutingError (No route matches [GET] "/admin_settings_index_path"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (82.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (103.5ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 00:29:42 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.3ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 20ms (Views: 16.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 00:51:18 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (17.1ms)
+Completed 200 OK in 37ms (Views: 26.7ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 01:05:22 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 01:05:22 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 01:05:23 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.3ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 12ms (Views: 10.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 01:05:23 -0500
+
+
+Started GET "/artists" for ::1 at 2016-02-04 01:17:58 -0500
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 208ms (Views: 200.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 01:17:59 -0500
+
+
+Started GET "/artists/new" for ::1 at 2016-02-04 01:18:00 -0500
+Processing by ArtistsController#new as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 12ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 01:18:00 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-02-04 01:18:02 -0500
+Processing by ArtistsController#new as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 01:18:02 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.1ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-02-04 01:18:09 -0500
+Processing by ArtistsController#new as HTML
+  [1m[36mPreference Load (0.4ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 2ms (ActiveRecord: 0.4ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 01:18:09 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.1ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/accesss" for ::1 at 2016-02-04 01:18:19 -0500
+
+ActionController::RoutingError (No route matches [GET] "/admin/accesss"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (3.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (15.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.9ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (107.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (121.1ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 01:18:21 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (15.2ms)
+Completed 200 OK in 26ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 01:18:27 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"W4F0qzaJD2IB7M+uF0YZ1JCPXHLRg6O65kRRObhs6yx4pD5NzzjRXv5amgY9cIlP57y455JA1eZjwtlMwPW5vw==", "preference"=>{"allow_create_artists"=>"true", "allow_create_songs"=>"false"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.4ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "preferences" SET "allow_create_artists" = ?, "updated_at" = ? WHERE "preferences"."id" = ?  [["allow_create_artists", "t"], ["updated_at", "2016-02-04 06:18:27.564248"], ["id", 1]]
+  [1m[36m (2.4ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 24ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 01:18:27 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 9ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 01:18:34 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-02-04 01:18:38 -0500
+Processing by ArtistsController#new as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered artists/new.html.erb within layouts/application (3.1ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/1" for ::1 at 2016-02-04 01:18:43 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?  [["artist_id", 1]]
+  Rendered artists/show.html.erb within layouts/application (34.4ms)
+Completed 200 OK in 43ms (Views: 40.9ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 01:22:54 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 10ms (Views: 9.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 01:22:54 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 01:22:55 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 15ms (Views: 13.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 01:23:04 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 11.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 01:23:04 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 01:23:10 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 13ms (Views: 12.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 01:23:10 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 01:23:32 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 13ms (Views: 12.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 01:23:32 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 01:23:44 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 11ms (Views: 10.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 01:23:44 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 01:23:45 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 01:23:47 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 12ms (Views: 11.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 01:23:48 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (3.5ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 01:23:49 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"/yyFB8Uhrb4lMXX6xhkx0Ak/GL21P20BpFiUWoeL+ljcCc/hPJBzgtqHIFLsL6FLfgz8KPb8G10h3hwv/xKoyw==", "preference"=>{"allow_create_artists"=>"false", "allow_create_songs"=>"false"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "preferences" SET "allow_create_artists" = ?, "updated_at" = ? WHERE "preferences"."id" = ?  [["allow_create_artists", "f"], ["updated_at", "2016-02-04 06:23:49.922629"], ["id", 1]]
+  [1m[36m (2.2ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 6ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 01:23:49 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 01:36:21 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 02:51:42 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.7ms)
+
+ActionView::MissingTemplate (Missing template admin/settings/index, application/index with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:erb, :builder, :raw, :ruby, :jbuilder]}. Searched in:
+  * "/Users/Frank/Development/rails/namespaced-routes-lab-v-000/app/views"
+):
+  actionview (4.2.5) lib/action_view/path_set.rb:46:in `find'
+  actionview (4.2.5) lib/action_view/lookup_context.rb:121:in `find'
+  actionview (4.2.5) lib/action_view/renderer/abstract_renderer.rb:18:in `find_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:40:in `determine_template'
+  actionview (4.2.5) lib/action_view/renderer/template_renderer.rb:8:in `render'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:42:in `render_template'
+  actionview (4.2.5) lib/action_view/renderer/renderer.rb:23:in `render'
+  actionview (4.2.5) lib/action_view/rendering.rb:100:in `_render_template'
+  actionpack (4.2.5) lib/action_controller/metal/streaming.rb:217:in `_render_template'
+  actionview (4.2.5) lib/action_view/rendering.rb:83:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:32:in `render_to_body'
+  actionpack (4.2.5) lib/action_controller/metal/renderers.rb:37:in `render_to_body'
+  actionpack (4.2.5) lib/abstract_controller/rendering.rb:25:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:16:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block (2 levels) in render'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `block in ms'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/benchmark.rb:303:in `realtime'
+  activesupport (4.2.5) lib/active_support/core_ext/benchmark.rb:12:in `ms'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:44:in `block in render'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:87:in `cleanup_view_runtime'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:25:in `cleanup_view_runtime'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:43:in `render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:10:in `default_render'
+  actionpack (4.2.5) lib/action_controller/metal/implicit_render.rb:5:in `send_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:198:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:20:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:117:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:555:in `block (2 levels) in compile'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:505:in `call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:92:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_process_action_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/abstract_controller/callbacks.rb:19:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/rescue.rb:29:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:32:in `block in process_action'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `block in instrument'
+  activesupport (4.2.5) lib/active_support/notifications/instrumenter.rb:20:in `instrument'
+  activesupport (4.2.5) lib/active_support/notifications.rb:164:in `instrument'
+  actionpack (4.2.5) lib/action_controller/metal/instrumentation.rb:30:in `process_action'
+  actionpack (4.2.5) lib/action_controller/metal/params_wrapper.rb:250:in `process_action'
+  activerecord (4.2.5) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (4.2.5) lib/abstract_controller/base.rb:137:in `process'
+  actionview (4.2.5) lib/action_view/rendering.rb:30:in `process'
+  actionpack (4.2.5) lib/action_controller/metal.rb:196:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal/rack_delegation.rb:13:in `dispatch'
+  actionpack (4.2.5) lib/action_controller/metal.rb:237:in `block in action'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `call'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:76:in `dispatch'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:45:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:43:in `block in serve'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `each'
+  actionpack (4.2.5) lib/action_dispatch/journey/router.rb:30:in `serve'
+  actionpack (4.2.5) lib/action_dispatch/routing/route_set.rb:817:in `call'
+  rack (1.6.4) lib/rack/etag.rb:24:in `call'
+  rack (1.6.4) lib/rack/conditionalget.rb:25:in `call'
+  rack (1.6.4) lib/rack/head.rb:13:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/params_parser.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/flash.rb:260:in `call'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:225:in `context'
+  rack (1.6.4) lib/rack/session/abstract/id.rb:220:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/cookies.rb:560:in `call'
+  activerecord (4.2.5) lib/active_record/query_cache.rb:36:in `call'
+  activerecord (4.2.5) lib/active_record/connection_adapters/abstract/connection_pool.rb:653:in `call'
+  activerecord (4.2.5) lib/active_record/migration.rb:377:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:88:in `__run_callbacks__'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:778:in `_run_call_callbacks'
+  activesupport (4.2.5) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (4.2.5) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/reloader.rb:73:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/remote_ip.rb:78:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:17:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/missing_template.html.erb within rescues/layout (64.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (113.3ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 02:51:46 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/Frank/Development/rails/namespaced-routes-lab-v-000/app/views/admin/access/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/admin/access/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (105.6ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 02:52:40 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (0.7ms)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.2ms)
+
+SyntaxError (/Users/Frank/Development/rails/namespaced-routes-lab-v-000/app/views/admin/access/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input):
+  app/views/admin/access/index.html.erb:5: syntax error, unexpected keyword_ensure, expecting end-of-input
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (59.9ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (45.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.3ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 02:53:02 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (15.2ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (undefined method `preference_path' for #<#<Class:0x007fce3b1e5e40>:0x007fce39bb0e40>):
+    1: <%= form_for @preference do |f| %>
+    2:   <%= f.label 'Hi' %>
+    3: <% end %>
+  app/views/admin/access/index.html.erb:1:in `_app_views_admin_access_index_html_erb___3365503405976883255_70261819077780'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (65.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.3ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 02:53:24 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (3.3ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (No route matches {:action=>"update", :controller=>"admin/access"} missing required keys: [:id]):
+    1: <%= form_for @preference, url: admin_access_path do |f| %>
+    2:   <%= f.label 'Hi' %>
+    3: <% end %>
+  app/views/admin/access/index.html.erb:1:in `_app_views_admin_access_index_html_erb___3365503405976883255_70261867661620'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (59.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (100.5ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 02:54:18 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 02:54:18 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:01:04 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 17ms (Views: 10.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:01:04 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:03:13 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (3.2ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (wrong number of arguments (1 for 2..3)):
+    1: <%= form_for @preference, url: admin_access_path(@preference) do |f| %>
+    2:   <%= f.label :allow_create_artists %>
+    3:   <%= f.radio_button :allow_create_artists %>
+    4: <% end %>
+  app/views/admin/access/index.html.erb:3:in `block in _app_views_admin_access_index_html_erb___3365503405976883255_70261894628380'
+  app/views/admin/access/index.html.erb:1:in `_app_views_admin_access_index_html_erb___3365503405976883255_70261894628380'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (61.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (109.4ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:03:27 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:03:27 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:03:40 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 7.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:03:40 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:03:42 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:03:42 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:04:17 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 11ms (Views: 10.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:04:17 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:04:31 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:04:31 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:05:29 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:05:29 -0500
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:10:45 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 24ms (Views: 16.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:10:45 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:20:49 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 21ms (Views: 13.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:20:52 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 10ms (Views: 8.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:20:52 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:21:21 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 11ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:21:21 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:21:44 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 14ms (Views: 12.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:21:44 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:22:10 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 19ms (Views: 11.6ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:22:10 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:23:08 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.2ms)
+
+ActionView::Template::Error (wrong number of arguments (1 for 2..3)):
+    1: <%= form_for @preference, url: admin_access_path(@preference) do |f| %>
+    2:   <%= f.label :artist_sort_order %><br>
+    3:   <p>ASC: <%= f.radio_button :artist_sort_order %></p>
+    4:   <p>DESC: <%= f.radio_button :artist_sort_order %></p>
+    5: 
+    6:   <%= f.label :song_sort_order %><br>
+  app/views/admin/settings/index.html.erb:3:in `block in _app_views_admin_settings_index_html_erb___327749837306621153_70261865265840'
+  app/views/admin/settings/index.html.erb:1:in `_app_views_admin_settings_index_html_erb___327749837306621153_70261865265840'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (70.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (57.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (120.1ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:24:14 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:24:14 -0500
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 03:37:18 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Wr/Fxlmll6Fo2hKLgRonO1LbUoioNaoQ1BSk1OyyOEV5mo8goBRJnZdsRyOrLLegJei2Hev23ExRkiyhlCtq1g==", "preference"=>{"artist_sort_order"=>"ASC", "song_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+Unpermitted parameters: artist_sort_order, song_sort_order
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:37:18 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:37:44 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 03:37:44 -0500
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 03:37:51 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"qc+3avzZYS6OT7hraG6lRKUUfRRSrFsDA8zYCQWmSaaK6v2MBWi/EnH57cNCWDXf0ieZgRFvLV+GSlB8fT8bNQ==", "preference"=>{"allow_create_artists"=>"true", "allow_create_songs"=>"false"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mUPDATE "preferences" SET "allow_create_artists" = ?, "updated_at" = ? WHERE "preferences"."id" = ?[0m  [["allow_create_artists", "t"], ["updated_at", "2016-02-04 08:37:51.348602"], ["id", 1]]
+  [1m[35m (3.4ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 7ms (ActiveRecord: 4.5ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:37:51 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 10ms (Views: 8.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:37:57 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:37:58 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-02-04 03:37:59 -0500
+Processing by ArtistsController#new as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered artists/new.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)
+
+
+Started POST "/artists" for ::1 at 2016-02-04 03:38:04 -0500
+Processing by ArtistsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CjyndL8VOJyw+6ePVffZJ+2T5tivhSJldODV6Kby6bcpGe2SRqTmoE9N8id/wUm8mqACTexGVDnxZl2d3mu7JA==", "artist"=>{"name"=>"Swag Master"}, "commit"=>"Create Artist"}
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Swag Master"], ["created_at", "2016-02-04 08:38:04.134903"], ["updated_at", "2016-02-04 08:38:04.134903"]]
+  [1m[36m (0.7ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/artists/6
+Completed 302 Found in 4ms (ActiveRecord: 1.1ms)
+
+
+Started GET "/artists/6" for ::1 at 2016-02-04 03:38:04 -0500
+Processing by ArtistsController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 6]]
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs" WHERE "songs"."artist_id" = ?[0m  [["artist_id", 6]]
+  Rendered artists/show.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 13ms (Views: 11.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:38:08 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.1ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 8ms (Views: 7.2ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:38:09 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 8ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:38:12 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 03:38:14 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PAdgtVjeLdMHvHgMk9U4W9JR1RLAEww10uwZu1q8EIsfIipToW/z7/gKLaS546jApWIxh4PQemlXapHOIiVCGA==", "preference"=>{"allow_create_artists"=>"false", "allow_create_songs"=>"false"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "preferences" SET "allow_create_artists" = ?, "updated_at" = ? WHERE "preferences"."id" = ?[0m  [["allow_create_artists", "f"], ["updated_at", "2016-02-04 08:38:14.867099"], ["id", 1]]
+  [1m[35m (2.6ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 8ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:38:14 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 9ms (Views: 7.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:38:19 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 7ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:38:19 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-02-04 03:38:21 -0500
+Processing by ArtistsController#new as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:38:21 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 6.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-02-04 03:38:22 -0500
+Processing by ArtistsController#new as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:38:22 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists/new" for ::1 at 2016-02-04 03:38:23 -0500
+Processing by ArtistsController#new as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+Redirected to http://localhost:3000/artists
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:38:23 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 7ms (Views: 7.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:38:30 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 03:38:34 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"hs+8+7HEY53UkBLNi29aYW817+x/Y5VEaKmme2F2BL2l6vYdSHW9oSsmR2WhWcr6GAYLeTyg4xjtLy4OGe9WLg==", "preference"=>{"allow_create_artists"=>"false", "allow_create_songs"=>"true"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mUPDATE "preferences" SET "allow_create_songs" = ?, "updated_at" = ? WHERE "preferences"."id" = ?[0m  [["allow_create_songs", "t"], ["updated_at", "2016-02-04 08:38:34.192075"], ["id", 1]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 5ms (ActiveRecord: 2.2ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:38:34 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 9.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 03:38:37 -0500
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.4ms)[0m  SELECT "songs".* FROM "songs"
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (18.2ms)
+Completed 200 OK in 26ms (Views: 24.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 03:38:38 -0500
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (12.2ms)
+Completed 200 OK in 21ms (Views: 19.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/songs/new" for ::1 at 2016-02-04 03:38:41 -0500
+Processing by SongsController#new as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered songs/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:38:46 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 10ms (Views: 9.0ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 03:38:48 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"cxpCjNq4hyV1rkcu4ZfvzkqkNIkUyg1oqkTlwg0WLu1QPwhqIwlZGYoYEobLoX9VPZfQHFcJezQvwm23dY98fg==", "preference"=>{"allow_create_artists"=>"false", "allow_create_songs"=>"false"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "preferences" SET "allow_create_songs" = ?, "updated_at" = ? WHERE "preferences"."id" = ?  [["allow_create_songs", "f"], ["updated_at", "2016-02-04 08:38:48.160076"], ["id", 1]]
+  [1m[36m (2.5ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 6ms (ActiveRecord: 2.9ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:38:48 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 9ms (Views: 8.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 03:38:51 -0500
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 18ms (Views: 16.5ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/songs/new" for ::1 at 2016-02-04 03:38:54 -0500
+Processing by SongsController#new as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+Redirected to http://localhost:3000/songs
+Completed 302 Found in 1ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 03:38:54 -0500
+Processing by SongsController#index as HTML
+  [1m[35mSong Load (0.2ms)[0m  SELECT "songs".* FROM "songs"
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 17ms (Views: 16.4ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:38:56 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 15ms (Views: 13.7ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 03:39:01 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38HYOUmsJUNzZ+bRmGVVrhOwCNpyEmWj6bCb5/6ZETn85JLfsB37f4zRs3myU8U1ZIPsTzHRE/9sNhOShgBDqg==", "preference"=>{"artist_sort_order"=>"ASC", "song_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameters: artist_sort_order, song_sort_order
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 3ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:39:01 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.5ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 9.5ms | ActiveRecord: 0.5ms)
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-02-04 03:39:18 -0500
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"38HYOUmsJUNzZ+bRmGVVrhOwCNpyEmWj6bCb5/6ZETn85JLfsB37f4zRs3myU8U1ZIPsTzHRE/9sNhOShgBDqg==", "preference"=>{"artist_sort_order"=>"ASC", "song_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 1]]
+Unpermitted parameters: artist_sort_order, song_sort_order
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 9ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-02-04 03:39:18 -0500
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 10.6ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:40:12 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 12ms (Views: 10.9ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/settings/1" for ::1 at 2016-02-04 03:40:14 -0500
+Processing by Admin::SettingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"5Bgo4/LM5U35tQz9M0nK9pPJ7R8V/eZgTSub1s+SXA/HPWIFC307cQYDWVUZf1pt5PoJilY+kDzIrROjtwsOnA==", "preference"=>{"artist_sort_order"=>"DESC", "song_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/settings
+Completed 302 Found in 2ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:40:14 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 9ms (Views: 8.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/settings/1" for ::1 at 2016-02-04 03:40:16 -0500
+Processing by Admin::SettingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"k6fDCDVxIVXrGEuUoOLiyOJ7mFWOKx29nwz4rVNfdtCwgonuzMD/aRSuHjyK1HJTlUh8wM3oa+EainDYK8YkQw==", "preference"=>{"artist_sort_order"=>"ASC", "song_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (2.5ms)[0m  UPDATE "preferences" SET "artist_sort_order" = ?, "updated_at" = ? WHERE "preferences"."id" = ?  [["artist_sort_order", "ASC"], ["updated_at", "2016-02-04 08:40:16.846960"], ["id", 1]]
+  [1m[36m (8.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/settings
+Completed 302 Found in 16ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 03:40:16 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (2.2ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:40:21 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT "artists".* FROM "artists"[0m
+  Rendered artists/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 17ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 03:40:21 -0500
+Processing by ArtistsController#index as HTML
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"
+  Rendered artists/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 9ms (Views: 8.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 03:40:38 -0500
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 26ms (Views: 23.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 04:24:59 -0500
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.8ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (38.1ms)
+Completed 200 OK in 64ms (Views: 55.5ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 04:24:59 -0500
+
+
+Started GET "/songs" for ::1 at 2016-02-04 04:25:01 -0500
+Processing by SongsController#index as HTML
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (13.7ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 04:25:01 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 04:25:03 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 24ms (Views: 16.3ms | ActiveRecord: 0.3ms)
+
+
+Started PATCH "/admin/settings/1" for ::1 at 2016-02-04 04:25:08 -0500
+Processing by Admin::SettingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"69DSGeacdNhOQOXXYgWGnJ2Uvx6WrtRwv+nTFHJA7BPI9Zj/Hy2q5LH2sH9IMxYH6qdbi9Vtoiw6b1thCtm+gA==", "preference"=>{"artist_sort_order"=>"DESC", "song_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  UPDATE "preferences" SET "artist_sort_order" = ?, "updated_at" = ? WHERE "preferences"."id" = ?  [["artist_sort_order", "DESC"], ["updated_at", "2016-02-04 09:25:08.898778"], ["id", 1]]
+  [1m[36m (2.9ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/settings
+Completed 302 Found in 10ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 04:25:08 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 11ms (Views: 10.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 04:25:13 -0500
+Processing by ArtistsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `find_or_create' for #<Class:0x007fce398c3f98>):
+  app/controllers/artists_controller.rb:3:in `index'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (58.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (121.4ms)
+
+
+Started GET "/artst" for ::1 at 2016-02-04 04:25:13 -0500
+
+ActionController::RoutingError (No route matches [GET] "/artst"):
+  actionpack (4.2.5) lib/action_dispatch/middleware/debug_exceptions.rb:21:in `call'
+  web-console (2.3.0) lib/web_console/middleware.rb:28:in `block in call'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `catch'
+  web-console (2.3.0) lib/web_console/middleware.rb:18:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/show_exceptions.rb:30:in `call'
+  railties (4.2.5) lib/rails/rack/logger.rb:38:in `call_app'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `block in call'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `block in tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:26:in `tagged'
+  activesupport (4.2.5) lib/active_support/tagged_logging.rb:68:in `tagged'
+  railties (4.2.5) lib/rails/rack/logger.rb:20:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/request_id.rb:21:in `call'
+  rack (1.6.4) lib/rack/methodoverride.rb:22:in `call'
+  rack (1.6.4) lib/rack/runtime.rb:18:in `call'
+  activesupport (4.2.5) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  actionpack (4.2.5) lib/action_dispatch/middleware/static.rb:116:in `call'
+  rack (1.6.4) lib/rack/sendfile.rb:113:in `call'
+  railties (4.2.5) lib/rails/engine.rb:518:in `call'
+  railties (4.2.5) lib/rails/application.rb:165:in `call'
+  rack (1.6.4) lib/rack/lock.rb:17:in `call'
+  rack (1.6.4) lib/rack/content_length.rb:15:in `call'
+  rack (1.6.4) lib/rack/handler/webrick.rb:88:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:138:in `service'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/httpserver.rb:94:in `run'
+  /Users/Frank/.rvm/rubies/ruby-2.2.3/lib/ruby/2.2.0/webrick/server.rb:294:in `block in start_thread'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_route.html.erb (2.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (77.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (46.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (102.6ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 04:25:17 -0500
+Processing by ArtistsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `find_or_create' for #<Class:0x007fce398c3f98>):
+  app/controllers/artists_controller.rb:3:in `index'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (66.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (50.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (104.1ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 04:25:17 -0500
+Processing by ArtistsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `find_or_create' for #<Class:0x007fce398c3f98>):
+  app/controllers/artists_controller.rb:3:in `index'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (63.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (48.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (105.1ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 04:25:59 -0500
+Processing by ArtistsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `find_or_create' for #<Class:0x007fce3b450b58>):
+  app/controllers/artists_controller.rb:3:in `index'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (64.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (104.7ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 04:26:00 -0500
+Processing by ArtistsController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `find_or_create' for #<Class:0x007fce3b450b58>):
+  app/controllers/artists_controller.rb:3:in `index'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (110.1ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 04:26:42 -0500
+Processing by ArtistsController#index as HTML
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+NoMethodError (undefined method `find_or_create' for #<Class:0x007fce3a523090>):
+  app/controllers/artists_controller.rb:3:in `index'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (56.1ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (99.8ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 04:27:00 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mArtist Load (0.2ms)[0m  SELECT "artists".* FROM "artists"  ORDER BY "artists"."name" DESC
+  Rendered artists/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 26ms (Views: 14.0ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 04:27:00 -0500
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 04:27:11 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 12ms (Views: 10.5ms | ActiveRecord: 0.2ms)
+
+
+Started PATCH "/admin/settings/1" for ::1 at 2016-02-04 04:27:17 -0500
+Processing by Admin::SettingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yhboew5/3AC+/IB1slyregtJufrsnh6mM89ho9/94+HpM6Kd984CPEFK1d2YajvhfHpdb69daPq2SenWp2Sxcg==", "preference"=>{"artist_sort_order"=>"ASC", "song_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  UPDATE "preferences" SET "artist_sort_order" = ?, "updated_at" = ? WHERE "preferences"."id" = ?  [["artist_sort_order", "ASC"], ["updated_at", "2016-02-04 09:27:17.765074"], ["id", 1]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/settings
+Completed 302 Found in 6ms (ActiveRecord: 2.5ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 04:27:17 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 10ms (Views: 9.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/artists" for ::1 at 2016-02-04 04:27:22 -0500
+Processing by ArtistsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT "artists".* FROM "artists"  ORDER BY "artists"."name" ASC
+  Rendered artists/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 9ms (Views: 7.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 04:28:47 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 17ms (Views: 10.3ms | ActiveRecord: 0.6ms)
+
+
+Started PATCH "/admin/settings/1" for ::1 at 2016-02-04 04:28:49 -0500
+Processing by Admin::SettingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"8q6d5isLJSvtLaMyfw3yQG5hJDEacoTw7dB3wdViu+rRi9cA0rr7FxKb9ppVO2LbGVLApFmx8qxoVv+0rfvpeQ==", "preference"=>{"artist_sort_order"=>"ASC", "song_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/settings
+Completed 302 Found in 3ms (ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/settings" for ::1 at 2016-02-04 04:28:49 -0500
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 04:28:52 -0500
+Processing by SongsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36mSong Load (0.2ms)[0m  [1mSELECT "songs".* FROM "songs"[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 5]]
+  Rendered songs/index.html.erb within layouts/application (16.7ms)
+Completed 200 OK in 27ms (Views: 23.5ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 04:29:21 -0500
+Processing by SongsController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mSong Load (0.9ms)[0m  SELECT "songs".* FROM "songs"  ORDER BY ASC
+  Rendered songs/index.html.erb within layouts/application (3.6ms)
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 1.6ms)
+
+ActionView::Template::Error (SQLite3::SQLException: no such column: ASC: SELECT "songs".* FROM "songs"  ORDER BY ASC):
+    1: <ul>
+    2: <% @songs.each do |song| %>
+    3:   <li><%= display_artist(song) %> - <%= link_to song.title, song_path(song) %></li>
+    4: <% end %>
+    5: </ul>
+  app/views/songs/index.html.erb:2:in `_app_views_songs_index_html_erb___946285218733359012_70261876946440'
+
+
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (68.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (47.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.8ms)
+  Rendered /Users/Frank/.rvm/gems/ruby-2.2.3/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (108.9ms)
+
+
+Started GET "/songs" for ::1 at 2016-02-04 04:29:50 -0500
+Processing by SongsController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mSong Load (0.3ms)[0m  SELECT "songs".* FROM "songs"  ORDER BY "songs"."title" ASC
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 1]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1  [["id", 4]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."id" = ? LIMIT 1[0m  [["id", 4]]
+  Rendered songs/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 43ms (Views: 31.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-02-04 04:29:50 -0500
