@@ -9,4 +9,5 @@ Rails.application.routes.draw do
     resources :settings, only: [:index, :update]
     resources :access, only: [:index, :update]
   end
+
 end

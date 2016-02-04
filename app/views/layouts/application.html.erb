@@ -6,6 +6,8 @@
     <%= csrf_meta_tags %>
   </head>
   <body>
+    <h2><%= link_to 'Settings', admin_settings_index_path %>
+    <%= link_to 'Access', admin_access_index_path %></h2>
     <% flash.each do |name, msg| -%>
       <%= content_tag :div, msg, class: name %>
     <% end -%>
