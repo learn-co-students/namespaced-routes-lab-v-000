@@ -1703,3 +1703,211 @@ Migrating to AddArtistToSong (20160126235547)
             FROM sqlite_temp_master
             WHERE name='index_songs_on_artist_id' AND type='index'
 [0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "The Killers"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "The Killers"], ["created_at", "2016-02-05 04:00:41.847931"], ["updated_at", "2016-02-05 04:00:41.847931"]]
+  [1m[36m (122.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 1], ["title", "Mr. Brightside"], ["created_at", "2016-02-05 04:00:41.974899"], ["updated_at", "2016-02-05 04:00:41.974899"]]
+  [1m[35m (106.3ms)[0m  commit transaction
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "The Killers"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 1], ["title", "Jenny Was a Friend of Mine"], ["created_at", "2016-02-05 04:00:42.083550"], ["updated_at", "2016-02-05 04:00:42.083550"]]
+  [1m[35m (108.9ms)[0m  commit transaction
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Tommy Tutone"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Tommy Tutone"], ["created_at", "2016-02-05 04:00:42.194472"], ["updated_at", "2016-02-05 04:00:42.194472"]]
+  [1m[35m (109.2ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 2], ["title", "Jenny"], ["created_at", "2016-02-05 04:00:42.305166"], ["updated_at", "2016-02-05 04:00:42.305166"]]
+  [1m[36m (109.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Daft Punk"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Daft Punk"], ["created_at", "2016-02-05 04:00:42.416677"], ["updated_at", "2016-02-05 04:00:42.416677"]]
+  [1m[36m (98.0ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 3], ["title", "Around the World"], ["created_at", "2016-02-05 04:00:42.516232"], ["updated_at", "2016-02-05 04:00:42.516232"]]
+  [1m[35m (109.5ms)[0m  commit transaction
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Daft Punk"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 3], ["title", "Harder, Better, Faster, Stronger"], ["created_at", "2016-02-05 04:00:42.627888"], ["updated_at", "2016-02-05 04:00:42.627888"]]
+  [1m[35m (97.9ms)[0m  commit transaction
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Pixies"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.1ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Pixies"], ["created_at", "2016-02-05 04:00:42.727867"], ["updated_at", "2016-02-05 04:00:42.727867"]]
+  [1m[35m (97.9ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Where is My Mind?"], ["created_at", "2016-02-05 04:00:42.827370"], ["updated_at", "2016-02-05 04:00:42.827370"]]
+  [1m[36m (87.2ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Gigantic"], ["created_at", "2016-02-05 04:00:42.916727"], ["updated_at", "2016-02-05 04:00:42.916727"]]
+  [1m[36m (108.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (5.3ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Monkey Gone to Heaven"], ["created_at", "2016-02-05 04:00:43.027860"], ["updated_at", "2016-02-05 04:00:43.027860"]]
+  [1m[36m (92.4ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePreferences (20160205040239)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "song_sort_order" varchar, "artist_sort_order" varchar, "allow_create_artists" boolean, "allow_create_songs" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160205040239"]]
+  [1m[36m (111.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "preferences" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-02-07 00:39:19.532898"], ["updated_at", "2016-02-07 00:39:19.532898"]]
+  [1m[36m (100.0ms)[0m  [1mcommit transaction[0m
+  [1m[35mPreference Load (0.4ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" DESC LIMIT 1
+  [1m[36mPreference Load (0.5ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" DESC LIMIT 1[0m
+  [1m[35mSQL (77.4ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 1]]
+  [1m[36mPreference Load (0.4ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" DESC LIMIT 1[0m
+  [1m[36mPreference Load (0.3ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 2]]
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 2]]
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Migrating to CreatePreferences (20160205040239)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "preferences"
+  [1m[36mSQL (0.2ms)[0m  [1mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?[0m  [["version", "20160205040239"]]
+  [1m[35m (82.7ms)[0m  commit transaction
+Migrating to AddArtistToSong (20160126235547)
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  CREATE TEMPORARY TABLE "asongs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL, "artist_id" integer) 
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "tindex_asongs_on_artist_id" ON "asongs" ("artist_id")[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "songs"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asongs" ("id","title","created_at","updated_at","artist_id") VALUES (1, 'Mr. Brightside', '2016-02-05 04:00:41.974899', '2016-02-05 04:00:41.974899', 1)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asongs" ("id","title","created_at","updated_at","artist_id") VALUES (2, 'Jenny Was a Friend of Mine', '2016-02-05 04:00:42.083550', '2016-02-05 04:00:42.083550', 1)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asongs" ("id","title","created_at","updated_at","artist_id") VALUES (3, 'Jenny', '2016-02-05 04:00:42.305166', '2016-02-05 04:00:42.305166', 2)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asongs" ("id","title","created_at","updated_at","artist_id") VALUES (4, 'Around the World', '2016-02-05 04:00:42.516232', '2016-02-05 04:00:42.516232', 3)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asongs" ("id","title","created_at","updated_at","artist_id") VALUES (5, 'Harder, Better, Faster, Stronger', '2016-02-05 04:00:42.627888', '2016-02-05 04:00:42.627888', 3)[0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "asongs" ("id","title","created_at","updated_at","artist_id") VALUES (6, 'Where is My Mind?', '2016-02-05 04:00:42.827370', '2016-02-05 04:00:42.827370', 4)
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "asongs" ("id","title","created_at","updated_at","artist_id") VALUES (7, 'Gigantic', '2016-02-05 04:00:42.916727', '2016-02-05 04:00:42.916727', 4)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "asongs" ("id","title","created_at","updated_at","artist_id") VALUES (8, 'Monkey Gone to Heaven', '2016-02-05 04:00:43.027860', '2016-02-05 04:00:43.027860', 4)
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "songs"[0m
+  [1m[35m (0.2ms)[0m  CREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) 
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='tindex_asongs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='tindex_asongs_on_artist_id' AND type='index'
+[0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "asongs"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "songs" ("id","title","created_at","updated_at") VALUES (1, 'Mr. Brightside', '2016-02-05 04:00:41.974899', '2016-02-05 04:00:41.974899')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "songs" ("id","title","created_at","updated_at") VALUES (2, 'Jenny Was a Friend of Mine', '2016-02-05 04:00:42.083550', '2016-02-05 04:00:42.083550')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "songs" ("id","title","created_at","updated_at") VALUES (3, 'Jenny', '2016-02-05 04:00:42.305166', '2016-02-05 04:00:42.305166')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "songs" ("id","title","created_at","updated_at") VALUES (4, 'Around the World', '2016-02-05 04:00:42.516232', '2016-02-05 04:00:42.516232')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "songs" ("id","title","created_at","updated_at") VALUES (5, 'Harder, Better, Faster, Stronger', '2016-02-05 04:00:42.627888', '2016-02-05 04:00:42.627888')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "songs" ("id","title","created_at","updated_at") VALUES (6, 'Where is My Mind?', '2016-02-05 04:00:42.827370', '2016-02-05 04:00:42.827370')
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "songs" ("id","title","created_at","updated_at") VALUES (7, 'Gigantic', '2016-02-05 04:00:42.916727', '2016-02-05 04:00:42.916727')[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "songs" ("id","title","created_at","updated_at") VALUES (8, 'Monkey Gone to Heaven', '2016-02-05 04:00:43.027860', '2016-02-05 04:00:43.027860')
+  [1m[36m (0.2ms)[0m  [1mDROP TABLE "asongs"[0m
+  [1m[35mSQL (0.1ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20160126235547"]]
+  [1m[36m (77.9ms)[0m  [1mcommit transaction[0m
+Migrating to CreateArtists (20160108015408)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (1.1ms)[0m  [1mDROP TABLE "artists"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20160108015408"]]
+  [1m[36m (85.4ms)[0m  [1mcommit transaction[0m
+Migrating to CreateSongs (20160108015311)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mDROP TABLE "songs"[0m
+  [1m[35mSQL (0.2ms)[0m  DELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = ?  [["version", "20160108015311"]]
+  [1m[36m (97.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateSongs (20160108015311)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "songs" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160108015311"]]
+  [1m[36m (106.6ms)[0m  [1mcommit transaction[0m
+Migrating to CreateArtists (20160108015408)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "artists" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160108015408"]]
+  [1m[36m (75.1ms)[0m  [1mcommit transaction[0m
+Migrating to AddArtistToSong (20160126235547)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.2ms)[0m  [1mALTER TABLE "songs" ADD "artist_id" integer[0m
+  [1m[35m (0.0ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mCREATE  INDEX "index_songs_on_artist_id" ON "songs" ("artist_id")[0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160126235547"]]
+  [1m[36m (97.3ms)[0m  [1mcommit transaction[0m
+Migrating to CreatePreferences (20160205040239)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "song_sort_order" varchar DEFAULT 'DESC', "artist_sort_order" varchar DEFAULT 'DESC', "allow_create_artists" boolean DEFAULT 't', "allow_create_songs" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160205040239"]]
+  [1m[36m (75.3ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-02-06 18:17:54 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "preferences" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-02-07 02:17:54.267759"], ["updated_at", "2016-02-07 02:17:54.267759"]]
+  [1m[36m (71.3ms)[0m  [1mcommit transaction[0m
+  Rendered admin/settings/index.html.erb within layouts/application (24.3ms)
+Completed 200 OK in 335ms (Views: 241.9ms | ActiveRecord: 72.4ms)
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-02-06 18:18:39 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (23.7ms)
+Completed 200 OK in 193ms (Views: 183.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-06 18:18:39 -0800
+
+
+Started GET "/admin/access" for 127.0.0.1 at 2016-02-06 18:22:41 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 190ms (Views: 182.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/admin/access" for 127.0.0.1 at 2016-02-06 18:24:57 -0800
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (20.0ms)
+Completed 200 OK in 195ms (Views: 186.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-02-06 18:24:57 -0800
