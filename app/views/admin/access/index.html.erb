@@ -1,0 +1,16 @@
+<%= form_for @preference, :url => admin_access_path(@preference), :method => :patch  do |f| %>
+
+  <%= f.label "Allow Create Artists" %>
+  <%= f.label :allow_create_artists, "True" %>
+  <%= f.radio_button :allow_create_artists, true %>
+  <%= f.label :allow_create_artists, "False" %> 
+  <%= f.radio_button :allow_create_artists, false %><br>
+  
+  <%= f.label "Allow Create Songs" %>
+   <%= f.label :allow_create_songs, "True" %>
+  <%= f.radio_button :allow_create_songs, true %> 
+   <%= f.label :allow_create_songs, "False" %>
+  <%= f.radio_button :allow_create_songs, false %><br>
+
+  <%= f.submit %>
+<% end %>
