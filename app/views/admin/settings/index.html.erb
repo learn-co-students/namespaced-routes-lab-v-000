@@ -1,0 +1,8 @@
+<%= form_for @preference, url: admin_access_path(@preference) do |f| %>
+  <%= f.label :artist_sort_order %>
+  <%= f.radio_button :artist_sort_order, "ASC" %> Ascending
+  <%= f.radio_button :artist_sort_order, "DESC" %> Descending<br>
+  <%= f.label :song_sort_order %>
+  <%= f.radio_button :song_sort_order, "ASC" %> Ascending
+  <%= f.radio_button :song_sort_order, "DESC" %> Descending<br>
+<% end %>
