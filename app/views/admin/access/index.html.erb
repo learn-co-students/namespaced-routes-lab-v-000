@@ -1,0 +1,10 @@
+<%= form_for @preference, url: admin_access_path(@preference) do |f| %>
+  <%= f.label :allow_create_artists %>
+  <%= f.check_box :allow_create_artists %>
+  <br>
+  <%= f.label :allow_create_songs %>
+  <%= f.check_box :allow_create_songs %>
+
+  <br>
+  <%= f.submit %>
+<% end %>
