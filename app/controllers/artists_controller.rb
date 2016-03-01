@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    preference = Preference.first
+    if preference.nil?
+      preference = Preference.new.default_values
+    end
+    @artists = Artist.sorted(preference)
   end
 
   def show
@@ -8,7 +12,15 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    preference = Preference.first
+    if preference.nil?
+      preference = Preference.new.default_values
+    end
+    if !preference.allow_create_artists
+      redirect_to artists_path, alert: "You do not have permission to add artists."
+    else
+      @artist = Artist.new
+    end
   end
 
   def create
