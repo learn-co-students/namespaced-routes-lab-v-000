@@ -1,0 +1,15 @@
+<h1>I'm the admin access index page and I set permissions.</h1>
+
+<%= form_for @preference, url: admin_access_path(@preference), method: :patch do |f| %>
+
+  <h3><%= f.label :allow_create_artists %></h3>
+  <p>Allow<%= f.radio_button :allow_create_artists, true %>
+  Disallow<%= f.radio_button :allow_create_artists, false %><p>
+
+  <h3><%= f.label :allow_create_songs %></h3>
+  <p>Allow<%= f.radio_button :allow_create_songs, true %>
+  Disallow<%= f.radio_button :allow_create_songs, false %></p>
+
+  <%= f.submit %>
+
+<% end %>
