@@ -1703,3 +1703,392 @@ Migrating to AddArtistToSong (20160126235547)
             FROM sqlite_temp_master
             WHERE name='index_songs_on_artist_id' AND type='index'
 [0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArtist Load (0.3ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "The Killers"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "The Killers"], ["created_at", "2016-03-07 12:41:24.451966"], ["updated_at", "2016-03-07 12:41:24.451966"]]
+  [1m[36m (112.1ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 1], ["title", "Mr. Brightside"], ["created_at", "2016-03-07 12:41:24.585439"], ["updated_at", "2016-03-07 12:41:24.585439"]]
+  [1m[35m (129.4ms)[0m  commit transaction
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "The Killers"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 1], ["title", "Jenny Was a Friend of Mine"], ["created_at", "2016-03-07 12:41:24.719348"], ["updated_at", "2016-03-07 12:41:24.719348"]]
+  [1m[35m (111.7ms)[0m  commit transaction
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Tommy Tutone"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Tommy Tutone"], ["created_at", "2016-03-07 12:41:24.835846"], ["updated_at", "2016-03-07 12:41:24.835846"]]
+  [1m[35m (111.0ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 2], ["title", "Jenny"], ["created_at", "2016-03-07 12:41:24.951050"], ["updated_at", "2016-03-07 12:41:24.951050"]]
+  [1m[36m (111.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Daft Punk"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Daft Punk"], ["created_at", "2016-03-07 12:41:25.067279"], ["updated_at", "2016-03-07 12:41:25.067279"]]
+  [1m[36m (113.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 3], ["title", "Around the World"], ["created_at", "2016-03-07 12:41:25.183791"], ["updated_at", "2016-03-07 12:41:25.183791"]]
+  [1m[35m (186.9ms)[0m  commit transaction
+  [1m[36mArtist Load (0.3ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Daft Punk"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 3], ["title", "Harder, Better, Faster, Stronger"], ["created_at", "2016-03-07 12:41:25.376532"], ["updated_at", "2016-03-07 12:41:25.376532"]]
+  [1m[35m (110.4ms)[0m  commit transaction
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Pixies"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Pixies"], ["created_at", "2016-03-07 12:41:25.492451"], ["updated_at", "2016-03-07 12:41:25.492451"]]
+  [1m[35m (109.8ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Where is My Mind?"], ["created_at", "2016-03-07 12:41:25.607533"], ["updated_at", "2016-03-07 12:41:25.607533"]]
+  [1m[36m (136.7ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.3ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Gigantic"], ["created_at", "2016-03-07 12:41:25.750029"], ["updated_at", "2016-03-07 12:41:25.750029"]]
+  [1m[36m (136.9ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.3ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Monkey Gone to Heaven"], ["created_at", "2016-03-07 12:41:25.892412"], ["updated_at", "2016-03-07 12:41:25.892412"]]
+  [1m[36m (110.9ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePreferences (20160307124318)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TABLE "preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "song_sort_order" varchar, "artist_sort_order" varchar, "allow_create_artists" boolean, "allow_create_songs" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160307124318"]]
+  [1m[36m (114.8ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:11:17 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "preferences" ("song_sort_order", "artist_sort_order", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["song_sort_order", "DESC"], ["artist_sort_order", "DESC"], ["created_at", "2016-03-07 13:11:17.599558"], ["updated_at", "2016-03-07 13:11:17.599558"]]
+  [1m[36m (132.8ms)[0m  [1mcommit transaction[0m
+  Rendered admin/settings/index.html.erb within layouts/application (21.1ms)
+Completed 500 Internal Server Error in 184ms (ActiveRecord: 134.2ms)
+
+ActionView::Template::Error (undefined method `preference_path' for #<#<Class:0x00000004166328>:0x00000004161620>):
+    1: <h1>Adjust Settings</h1>
+    2: <%= form_for(@preference) do |f| %>
+    3:   <%= f.label :song_sort_order %>
+    4:   <%= f.radio_button(:song_sort_order, "ASC") %>
+    5:   <%= f.radio_button(:song_sort_order, "DESC") %>
+  app/views/admin/settings/index.html.erb:2:in `_app_views_admin_settings_index_html_erb___1188590076670770419_34095040'
+
+
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.5ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (9.9ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (34.1ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (14.9ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.0ms)
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:11:56 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (179969.7ms)
+Completed 500 Internal Server Error in 179973ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `preference_path' for #<#<Class:0x00000004166328>:0x00000003933a70>):
+    1: <h1>Adjust Settings</h1>
+    2: <%= binding.pry %>
+    3: <%= form_for(@preference) do |f| %>
+    4:   <%= f.label :song_sort_order %>
+    5:   <%= f.radio_button(:song_sort_order, "ASC") %>
+    6:   <%= f.radio_button(:song_sort_order, "DESC") %>
+  app/views/admin/settings/index.html.erb:3:in `_app_views_admin_settings_index_html_erb___1188590076670770419_29986500'
+
+
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.0ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (26.0ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (17.0ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (33.1ms)
+
+
+Started POST "/admin/console/repl_sessions/235f0e014c8673a7c07e9df94271161c/trace" for 127.0.0.1 at 2016-03-07 07:15:38 -0600
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:18:08 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.3ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (2.1ms)
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.3ms)
+
+SyntaxError (/home/adam/Documents/LearnVerified/namespaced-routes-lab-v-000/app/views/admin/settings/index.html.erb:2: syntax error, unexpected tLABEL
+...d=  form_for(@preference), url: admin_settings(@preference) ...
+...                               ^):
+  app/views/admin/settings/index.html.erb:2: syntax error, unexpected tLABEL
+
+
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (26.2ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.8ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (20.1ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (41.2ms)
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:18:45 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (14.5ms)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.3ms)
+
+ActionView::Template::Error (undefined method `admin_settings' for #<#<Class:0x00000004166328>:0x007f3210c023a0>):
+    1: <h1>Adjust Settings</h1>
+    2: <%= form_for @preference, url: admin_settings(@preference) do |f| %>
+    3:   <%= f.label :song_sort_order %>
+    4:   <%= f.radio_button(:song_sort_order, "ASC") %>
+    5:   <%= f.radio_button(:song_sort_order, "DESC") %>
+  app/views/admin/settings/index.html.erb:2:in `_app_views_admin_settings_index_html_erb___1188590076670770419_69926503057620'
+
+
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (14.9ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (32.7ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (16.8ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /home/adam/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (30.9ms)
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:19:05 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.3ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (39.6ms)
+Completed 200 OK in 212ms (Views: 210.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:05 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:05 -0600
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:05 -0600
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:19:18 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 66ms (Views: 64.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:19 -0600
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:19 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:19 -0600
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:19:35 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.3ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:36 -0600
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:36 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:36 -0600
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:19:43 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 13ms (Views: 11.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:43 -0600
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:43 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:19:43 -0600
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:20:13 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:20:13 -0600
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:20:13 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:20:13 -0600
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:20:54 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16ms (Views: 14.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:20:54 -0600
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:20:54 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:20:54 -0600
+
+
+Started PATCH "/admin/settings/1" for 127.0.0.1 at 2016-03-07 07:21:00 -0600
+Processing by Admin::SettingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ysVqJVahBCmgE8n5eA6q6Km0+xNne480EYGF8tsIS+ugBvIVqKNMs0pRGv6BO7Ua+rmGJ6e8gtL3jhYsCtMzNw==", "preference"=>{"song_sort_order"=>"DESC", "artist_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[36mPreference Load (0.3ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mUPDATE "preferences" SET "artist_sort_order" = ?, "updated_at" = ? WHERE "preferences"."id" = ?[0m  [["artist_sort_order", "ASC"], ["updated_at", "2016-03-07 13:21:00.619326"], ["id", 1]]
+  [1m[35m (128.8ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/settings
+Completed 302 Found in 142ms (ActiveRecord: 129.7ms)
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:21:00 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.4ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 21ms (Views: 19.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:21:12 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/settings/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 22ms (Views: 19.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:21:13 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:21:13 -0600
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:21:13 -0600
+
+
+Started PATCH "/admin/settings/1" for 127.0.0.1 at 2016-03-07 07:21:17 -0600
+Processing by Admin::SettingsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"72r9Ia6zpkGMrehFshmZx9h5TUVGTm0befF/1n76DleFqWURULHu22bvO0JLLIY1i3QwcYaJYP2f/uwIryF2iw==", "preference"=>{"song_sort_order"=>"ASC", "artist_sort_order"=>"ASC"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "preferences" SET "song_sort_order" = ?, "updated_at" = ? WHERE "preferences"."id" = ?[0m  [["song_sort_order", "ASC"], ["updated_at", "2016-03-07 13:21:17.070383"], ["id", 1]]
+  [1m[35m (115.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/settings
+Completed 302 Found in 123ms (ActiveRecord: 116.5ms)
+
+
+Started GET "/admin/settings" for 127.0.0.1 at 2016-03-07 07:21:17 -0600
+Processing by Admin::SettingsController#index as HTML
+  [1m[36mPreference Load (0.3ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/settings/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 15ms (Views: 13.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/access" for 127.0.0.1 at 2016-03-07 07:30:23 -0600
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (26.2ms)
+Completed 200 OK in 219ms (Views: 206.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/admin/access" for 127.0.0.1 at 2016-03-07 07:31:11 -0600
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.4ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 17ms (Views: 14.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:31:11 -0600
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:31:11 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:31:11 -0600
+
+
+Started GET "/admin/access" for 127.0.0.1 at 2016-03-07 07:31:14 -0600
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.3ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 13ms (Views: 12.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/admin/access.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:31:15 -0600
+
+
+Started GET "/assets/admin/settings.self-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css?body=1" for 127.0.0.1 at 2016-03-07 07:31:15 -0600
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2016-03-07 07:31:15 -0600
+
+
+Started PATCH "/admin/access/1" for 127.0.0.1 at 2016-03-07 07:31:17 -0600
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SiVcxn/jRONXQ4bLmt/ie4qZdUtj7OPOqv8jD5zFOl8g5sT2geEMeb0BVcxj6v2J2ZQIf6Mr7ihM8LDRTR5Cgw==", "preference"=>{"allow_create_artists"=>"true", "allow_create_songs"=>"false"}, "commit"=>"Update Preference", "id"=>"1"}
+  [1m[36mPreference Load (0.4ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.6ms)[0m  [1mUPDATE "preferences" SET "allow_create_songs" = ?, "allow_create_artists" = ?, "updated_at" = ? WHERE "preferences"."id" = ?[0m  [["allow_create_songs", "f"], ["allow_create_artists", "t"], ["updated_at", "2016-03-07 13:31:33.078680"], ["id", 1]]
+  [1m[35m (132.2ms)[0m  commit transaction
+  [1m[36mPreference Load (0.4ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
