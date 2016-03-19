@@ -1,0 +1,15 @@
+<h1>Access</h1>
+
+<%= form_for @preference , url: admin_access_path(@preference) do |f| %>
+  <%= f.label :allow_create_artists, "Allow artists to be created" %><br>
+  True: <%= f.radio_button :allow_create_artists, true %>
+  False: <%= f.radio_button :allow_create_artists, false %>
+  <br><br>
+
+  <%= f.label :allow_create_songs, "Allow songs to be created" %><br>
+  True: <%= f.radio_button :allow_create_songs, true %>
+  False: <%= f.radio_button :allow_create_songs, false %>
+  <br><br>
+
+  <%= f.submit "Submit Preferences" %>
+<% end %>

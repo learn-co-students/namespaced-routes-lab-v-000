@@ -1,6 +1,8 @@
 class ArtistsController < ApplicationController
+  include ArtistsHelper
+
   def index
-    @artists = Artist.all
+    @artists = ordered_artists(Artist.all)
   end
 
   def show
@@ -8,6 +10,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    redirect_to artists_path, alert: "Not allowed to create artists" if Preference.first.allow_create_artists == false
     @artist = Artist.new
   end
 
