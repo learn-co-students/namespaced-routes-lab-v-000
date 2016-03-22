@@ -9,6 +9,11 @@ class ArtistsController < ApplicationController
 
   def new
     @artist = Artist.new
+    if !params[:allow_create_artists]
+      redirect_to artists_path, alert: "Cannot create artist!"
+    else
+      @artist = Artist.new
+    end
   end
 
   def create
