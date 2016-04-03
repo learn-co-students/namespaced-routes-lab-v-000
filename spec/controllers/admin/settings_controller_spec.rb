@@ -18,7 +18,7 @@ RSpec.describe Admin::SettingsController, type: :controller do
 
   describe "#update" do
     it "returns http success" do
-      pref = Preference.create(artist_sort_order: "ASC", song_sort_order: "DESC")
+      pref = Preference.create(artist_sort_order: "DESC", song_sort_order: "DESC")
       patch :update, id: pref.id, preference: {artist_sort_order: "DESC", id: pref.id}
       expect(response).to redirect_to(admin_settings_index_path)
       expect(Preference.first.artist_sort_order).to eq "DESC"
