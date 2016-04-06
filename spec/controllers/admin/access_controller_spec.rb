@@ -5,7 +5,7 @@ RSpec.describe Admin::AccessController, type: :controller do
   describe "#index" do
     it "gets new pref if none exists" do
       get :index
-      expect(assigns[:preference].persisted?).to eq true
+      expect(assigns[:preference].persisted?).to eq true     
     end
 
     it "gets existing pref if exists" do
