@@ -1703,3 +1703,471 @@ Migrating to AddArtistToSong (20160126235547)
             FROM sqlite_temp_master
             WHERE name='index_songs_on_artist_id' AND type='index'
 [0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.1ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.1ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35mArtist Load (1.4ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "The Killers"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "The Killers"], ["created_at", "2016-04-07 15:21:49.645948"], ["updated_at", "2016-04-07 15:21:49.645948"]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.5ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 1], ["title", "Mr. Brightside"], ["created_at", "2016-04-07 15:21:49.660850"], ["updated_at", "2016-04-07 15:21:49.660850"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "The Killers"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 1], ["title", "Jenny Was a Friend of Mine"], ["created_at", "2016-04-07 15:21:49.666601"], ["updated_at", "2016-04-07 15:21:49.666601"]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Tommy Tutone"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Tommy Tutone"], ["created_at", "2016-04-07 15:21:49.671285"], ["updated_at", "2016-04-07 15:21:49.671285"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 2], ["title", "Jenny"], ["created_at", "2016-04-07 15:21:49.675214"], ["updated_at", "2016-04-07 15:21:49.675214"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Daft Punk"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)  [["name", "Daft Punk"], ["created_at", "2016-04-07 15:21:49.679896"], ["updated_at", "2016-04-07 15:21:49.679896"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 3], ["title", "Around the World"], ["created_at", "2016-04-07 15:21:49.683624"], ["updated_at", "2016-04-07 15:21:49.683624"]]
+  [1m[35m (1.4ms)[0m  commit transaction
+  [1m[36mArtist Load (0.2ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Daft Punk"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["artist_id", 3], ["title", "Harder, Better, Faster, Stronger"], ["created_at", "2016-04-07 15:21:49.688453"], ["updated_at", "2016-04-07 15:21:49.688453"]]
+  [1m[35m (1.3ms)[0m  commit transaction
+  [1m[36mArtist Load (0.1ms)[0m  [1mSELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1[0m  [["name", "Pixies"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "artists" ("name", "created_at", "updated_at") VALUES (?, ?, ?)[0m  [["name", "Pixies"], ["created_at", "2016-04-07 15:21:49.693215"], ["updated_at", "2016-04-07 15:21:49.693215"]]
+  [1m[35m (1.7ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Where is My Mind?"], ["created_at", "2016-04-07 15:21:49.697810"], ["updated_at", "2016-04-07 15:21:49.697810"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.2ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Gigantic"], ["created_at", "2016-04-07 15:21:49.702525"], ["updated_at", "2016-04-07 15:21:49.702525"]]
+  [1m[36m (1.4ms)[0m  [1mcommit transaction[0m
+  [1m[35mArtist Load (0.1ms)[0m  SELECT  "artists".* FROM "artists" WHERE "artists"."name" = ? LIMIT 1  [["name", "Pixies"]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "songs" ("artist_id", "title", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["artist_id", 4], ["title", "Monkey Gone to Heaven"], ["created_at", "2016-04-07 15:21:49.707351"], ["updated_at", "2016-04-07 15:21:49.707351"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreatePreferences (20160407154805)
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36m (0.4ms)[0m  [1mCREATE TABLE "preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar, "song_sort_order" varchar, "allow_create_artists" boolean, "allow_create_songs" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES (?)  [["version", "20160407154805"]]
+  [1m[36m (1.1ms)[0m  [1mcommit transaction[0m
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+  [1m[36m (0.2ms)[0m  [1m            SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+[0m
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 12:43:55 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (1.3ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.5ms)[0m  INSERT INTO "preferences" ("id", "created_at", "updated_at") VALUES (?, ?, ?)  [["id", 1], ["created_at", "2016-04-07 16:43:56.036666"], ["updated_at", "2016-04-07 16:43:56.036666"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  Rendered admin/access/index.html.erb within layouts/application (19.3ms)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 4.8ms)
+
+ActionView::Template::Error (undefined method `preference_path' for #<#<Class:0x007ff6950a82d0>:0x007ff695098e70>):
+    1: <h2>Edit Access Form</h2>
+    2: 
+    3: <%= form_for @pref do |f| %>
+    4:   <%= f.label :allow_create_artists %>
+    5:   <%= f.check_box :allow_create_artists %><br>
+    6: 
+  app/views/admin/access/index.html.erb:3:in `_app_views_admin_access_index_html_erb__3209238157945268033_70348519443220'
+
+
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.2ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (11.7ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (62.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (100.3ms)
+
+
+Started POST "/admin/console/repl_sessions/e4452de90aef13651c2b5f84a25a5d82/trace" for ::1 at 2016-04-07 12:44:34 -0400
+
+
+Started POST "/admin/console/repl_sessions/e4452de90aef13651c2b5f84a25a5d82/trace" for ::1 at 2016-04-07 12:44:36 -0400
+
+
+Started POST "/admin/console/repl_sessions/e4452de90aef13651c2b5f84a25a5d82/trace" for ::1 at 2016-04-07 12:45:05 -0400
+
+
+Started POST "/admin/console/repl_sessions/e4452de90aef13651c2b5f84a25a5d82/trace" for ::1 at 2016-04-07 12:45:15 -0400
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 12:49:16 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered admin/access/index.html.erb within layouts/application (33.4ms)
+Completed 200 OK in 249ms (Views: 247.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 12:49:16 -0400
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 12:51:03 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered admin/access/index.html.erb within layouts/application (3.9ms)
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.1ms)
+
+ActionView::Template::Error (No route matches {:action=>"update", :controller=>"admin/access"} missing required keys: [:id]):
+    1: <h2>Edit Access Form</h2>
+    2: 
+    3: <%= form_for @pref, url: admin_access_path do |f| %>
+    4:   <%= f.label :allow_create_artists %>
+    5:   <%= f.check_box :allow_create_artists %><br>
+    6: 
+  app/views/admin/access/index.html.erb:3:in `_app_views_admin_access_index_html_erb__3209238157945268033_70348531193940'
+
+
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.0ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/template_error.html.erb within rescues/layout (50.2ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (43.9ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.3ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 12:51:48 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 1]]
+  Rendered admin/access/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 14ms (Views: 12.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 12:51:48 -0400
+
+
+Started PATCH "/admin/access/1" for ::1 at 2016-04-07 12:52:50 -0400
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"IpCF5nPNaxPtMVprgavbB2V21qisUvh3X0ERfMHfN9eaT3vhle1p2qRVXa8LdOVAPpgBrmRyaPThFmxyEKHXCw==", "preference"=>{"allow_create_artists"=>"1", "allow_create_songs"=>"0"}, "commit"=>"Update Preference", "id"=>"1"}
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 12:52:50 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 1]]
+  Rendered admin/access/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 14ms (Views: 13.0ms | ActiveRecord: 0.2ms)
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.7ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 1]]
+  [1m[35m (1.6ms)[0m  commit transaction
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "preferences" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-07 16:55:09.247011"], ["updated_at", "2016-04-07 16:55:09.247011"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  [1m[35mPreference Load (0.2ms)[0m  SELECT "preferences".* FROM "preferences"
+  [1m[36m (0.0ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 2]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 12:58:09 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "preferences" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-07 16:58:09.902171"], ["updated_at", "2016-04-07 16:58:09.902171"]]
+  [1m[36m (1.9ms)[0m  [1mcommit transaction[0m
+  Rendered admin/access/index.html.erb within layouts/application (45.4ms)
+Completed 200 OK in 248ms (Views: 224.8ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 12:58:10 -0400
+
+
+Started PATCH "/admin/access/3" for ::1 at 2016-04-07 12:58:13 -0400
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gNBQpEhyrkfyb09R+9IBSXdJdbMq2g3WshbppmudUHs4D66jrlKsjrsLSJVxDT8OLKeiteL6nVUMQZSouuOwpw==", "preference"=>{"allow_create_artists"=>"1", "allow_create_songs"=>"0"}, "commit"=>"Update Preference", "id"=>"3"}
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 3]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.2ms)
+
+ArgumentError (wrong number of arguments (0 for 1)):
+  app/controllers/admin/access_controller.rb:16:in `access_params'
+  app/controllers/admin/access_controller.rb:9:in `update'
+
+
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.2ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (51.5ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (1.0ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (1.2ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (1.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.9ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (49.8ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (1.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (111.7ms)
+
+
+Started PATCH "/admin/access/3" for ::1 at 2016-04-07 12:58:44 -0400
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"gNBQpEhyrkfyb09R+9IBSXdJdbMq2g3WshbppmudUHs4D66jrlKsjrsLSJVxDT8OLKeiteL6nVUMQZSouuOwpw==", "preference"=>{"allow_create_artists"=>"1", "allow_create_songs"=>"0"}, "commit"=>"Update Preference", "id"=>"3"}
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 3]]
+Completed 400 Bad Request in 18ms (ActiveRecord: 1.0ms)
+
+ActionController::ParameterMissing (param is missing or the value is empty: access):
+  app/controllers/admin/access_controller.rb:16:in `access_params'
+  app/controllers/admin/access_controller.rb:9:in `update'
+
+
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_source.erb (5.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.2ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/actionpack-4.2.5/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (61.1ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/console.js.erb within layouts/javascript (44.1ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /Users/rachelk/.rvm/gems/ruby-2.2.1/gems/web-console-2.2.1/lib/web_console/templates/index.html.erb (94.5ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 12:59:03 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 28ms (Views: 18.9ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 12:59:03 -0400
+
+
+Started PATCH "/admin/access/3" for ::1 at 2016-04-07 12:59:05 -0400
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"4y1LsCF9cgTcByQM1wIAGdeYJbRHoO9XraAW4tLFAgpb8rW3x11wzZVjI8hd3T5ejHbyso+Af9QT92vsA7vi1g==", "preference"=>{"allow_create_artists"=>"1", "allow_create_songs"=>"0"}, "commit"=>"Update Preference", "id"=>"3"}
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.6ms)[0m  [1mUPDATE "preferences" SET "allow_create_artists" = ?, "allow_create_songs" = ?, "updated_at" = ? WHERE "preferences"."id" = ?[0m  [["allow_create_artists", "t"], ["allow_create_songs", "f"], ["updated_at", "2016-04-07 16:59:05.666322"], ["id", 3]]
+  [1m[35m (1.7ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 11ms (ActiveRecord: 3.7ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 12:59:05 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.9ms)
+Completed 200 OK in 15ms (Views: 14.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 13:00:24 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.1ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 25ms (Views: 16.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 13:00:24 -0400
+
+
+Started PATCH "/admin/access/3" for ::1 at 2016-04-07 13:00:26 -0400
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"68kj4yDUa6raxZ1es1zMLewSGKrqpvgYWoHITpn/uMdTFt3kxvRpY5Ohmpo5g/Jqt/zPrCKGaJvk1rVASIFYGw==", "preference"=>{"allow_create_artists"=>"1", "allow_create_songs"=>"1"}, "commit"=>"Update Preference", "id"=>"3"}
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1[0m  [["id", 3]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (1.3ms)[0m  [1mUPDATE "preferences" SET "allow_create_songs" = ?, "updated_at" = ? WHERE "preferences"."id" = ?[0m  [["allow_create_songs", "t"], ["updated_at", "2016-04-07 17:00:26.869795"], ["id", 3]]
+  [1m[35m (1.5ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35m (0.2ms)[0m  commit transaction
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 7ms (ActiveRecord: 3.3ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 13:00:26 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.3ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 9ms (Views: 8.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 13:30:50 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (15.9ms)
+Completed 200 OK in 48ms (Views: 31.6ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 13:30:51 -0400
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 13:31:44 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 19ms (Views: 18.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 13:31:45 -0400
+
+
+Started PATCH "/admin/access/3" for ::1 at 2016-04-07 13:31:59 -0400
+Processing by Admin::AccessController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"e2VHxdQzyizanJfouvxdwundbbfbYUHGcKCXmfLzoTDDurnCMhPI5ZP4kCwwI2OFsjO6sRNB0UXO9+qXI41B7A==", "preference"=>{"allow_create_artists"=>"true", "allow_create_songs"=>"false"}, "commit"=>"Update Preference", "id"=>"3"}
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences" WHERE "preferences"."id" = ? LIMIT 1  [["id", 3]]
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.7ms)[0m  UPDATE "preferences" SET "allow_create_songs" = ?, "updated_at" = ? WHERE "preferences"."id" = ?  [["allow_create_songs", "f"], ["updated_at", "2016-04-07 17:31:59.950689"], ["id", 3]]
+  [1m[36m (1.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.1ms)[0m  [1mcommit transaction[0m
+Redirected to http://localhost:3000/admin/access
+Completed 302 Found in 12ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 13:31:59 -0400
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  Rendered admin/access/index.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 13ms (Views: 11.9ms | ActiveRecord: 0.2ms)
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mPreference Load (2.0ms)[0m  SELECT "preferences".* FROM "preferences"
+  [1m[36m (0.6ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.6ms)[0m  DELETE FROM "preferences" WHERE "preferences"."id" = ?  [["id", 3]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 13:40:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.6ms)[0m  INSERT INTO "preferences" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-07 17:40:57.557771"], ["updated_at", "2016-04-07 17:40:57.557771"]]
+  [1m[36m (1.5ms)[0m  [1mcommit transaction[0m
+  Rendered admin/access/index.html.erb within layouts/application (46.7ms)
+Completed 200 OK in 231ms (Views: 209.9ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 13:40:57 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDefaultValueToPreferences (20160407174418)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.7ms)[0m  [1mCREATE TEMPORARY TABLE "apreferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar, "song_sort_order" varchar, "allow_create_artists" boolean, "allow_create_songs" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "preferences"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "apreferences" ("id","artist_sort_order","song_sort_order","allow_create_artists","allow_create_songs","created_at","updated_at") VALUES (4, NULL, NULL, NULL, NULL, '2016-04-07 17:40:57.557771', '2016-04-07 17:40:57.557771')[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "preferences"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar, "song_sort_order" varchar, "allow_create_artists" boolean DEFAULT 't', "allow_create_songs" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "apreferences"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "preferences" ("id","artist_sort_order","song_sort_order","allow_create_artists","allow_create_songs","created_at","updated_at") VALUES (4, NULL, NULL, NULL, NULL, '2016-04-07 17:40:57.557771', '2016-04-07 17:40:57.557771')[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "apreferences"
+  [1m[36m (0.1ms)[0m  [1mCREATE TEMPORARY TABLE "apreferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar, "song_sort_order" varchar, "allow_create_artists" boolean DEFAULT 't', "allow_create_songs" boolean, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "preferences"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "apreferences" ("id","artist_sort_order","song_sort_order","allow_create_artists","allow_create_songs","created_at","updated_at") VALUES (4, NULL, NULL, NULL, NULL, '2016-04-07 17:40:57.557771', '2016-04-07 17:40:57.557771')[0m
+  [1m[35m (0.3ms)[0m  DROP TABLE "preferences"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar, "song_sort_order" varchar, "allow_create_artists" boolean DEFAULT 't', "allow_create_songs" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.0ms)[0m  SELECT * FROM "apreferences"
+  [1m[36m (0.0ms)[0m  [1mINSERT INTO "preferences" ("id","artist_sort_order","song_sort_order","allow_create_artists","allow_create_songs","created_at","updated_at") VALUES (4, NULL, NULL, NULL, NULL, '2016-04-07 17:40:57.557771', '2016-04-07 17:40:57.557771')[0m
+  [1m[35m (0.1ms)[0m  DROP TABLE "apreferences"
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160407174418"]]
+  [1m[35m (1.9ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 13:46:49 -0400
+  [1m[35mActiveRecord::SchemaMigration Load (0.2ms)[0m  SELECT "schema_migrations".* FROM "schema_migrations"
+Processing by Admin::AccessController#index as HTML
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  Rendered admin/access/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 17.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 13:46:49 -0400
+  [1m[36mPreference Load (2.4ms)[0m  [1mSELECT "preferences".* FROM "preferences"[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "preferences" WHERE "preferences"."id" = ?[0m  [["id", 4]]
+  [1m[35m (1.5ms)[0m  commit transaction
+
+
+Started GET "/admin/access" for ::1 at 2016-04-07 13:47:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by Admin::AccessController#index as HTML
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "preferences" ("created_at", "updated_at") VALUES (?, ?)  [["created_at", "2016-04-07 17:47:19.388440"], ["updated_at", "2016-04-07 17:47:19.388440"]]
+  [1m[36m (2.0ms)[0m  [1mcommit transaction[0m
+  Rendered admin/access/index.html.erb within layouts/application (45.7ms)
+Completed 200 OK in 232ms (Views: 214.2ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for ::1 at 2016-04-07 13:47:19 -0400
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to AddDefaultSortOrdersToPreferences (20160407174831)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.5ms)[0m  [1mCREATE TEMPORARY TABLE "apreferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar, "song_sort_order" varchar, "allow_create_artists" boolean DEFAULT 't', "allow_create_songs" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "preferences"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "apreferences" ("id","artist_sort_order","song_sort_order","allow_create_artists","allow_create_songs","created_at","updated_at") VALUES (5, NULL, NULL, 't', 't', '2016-04-07 17:47:19.388440', '2016-04-07 17:47:19.388440')[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "preferences"
+  [1m[36m (0.1ms)[0m  [1mCREATE TABLE "preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar DEFAULT 'desc', "song_sort_order" varchar, "allow_create_artists" boolean DEFAULT 't', "allow_create_songs" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "apreferences"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "preferences" ("id","artist_sort_order","song_sort_order","allow_create_artists","allow_create_songs","created_at","updated_at") VALUES (5, NULL, NULL, 't', 't', '2016-04-07 17:47:19.388440', '2016-04-07 17:47:19.388440')[0m
+  [1m[35m (0.4ms)[0m  DROP TABLE "apreferences"
+  [1m[36m (0.1ms)[0m  [1mCREATE TEMPORARY TABLE "apreferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar DEFAULT 'desc', "song_sort_order" varchar, "allow_create_artists" boolean DEFAULT 't', "allow_create_songs" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "preferences"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "apreferences" ("id","artist_sort_order","song_sort_order","allow_create_artists","allow_create_songs","created_at","updated_at") VALUES (5, NULL, NULL, 't', 't', '2016-04-07 17:47:19.388440', '2016-04-07 17:47:19.388440')[0m
+  [1m[35m (0.5ms)[0m  DROP TABLE "preferences"
+  [1m[36m (0.2ms)[0m  [1mCREATE TABLE "preferences" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "artist_sort_order" varchar DEFAULT 'desc', "song_sort_order" varchar DEFAULT 'desc', "allow_create_artists" boolean DEFAULT 't', "allow_create_songs" boolean DEFAULT 't', "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  SELECT * FROM "apreferences"
+  [1m[36m (0.1ms)[0m  [1mINSERT INTO "preferences" ("id","artist_sort_order","song_sort_order","allow_create_artists","allow_create_songs","created_at","updated_at") VALUES (5, NULL, NULL, 't', 't', '2016-04-07 17:47:19.388440', '2016-04-07 17:47:19.388440')[0m
+  [1m[35m (0.2ms)[0m  DROP TABLE "apreferences"
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20160407174831"]]
+  [1m[35m (2.0ms)[0m  commit transaction
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m              SELECT sql
+            FROM sqlite_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+            UNION ALL
+            SELECT sql
+            FROM sqlite_temp_master
+            WHERE name='index_songs_on_artist_id' AND type='index'
+
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
