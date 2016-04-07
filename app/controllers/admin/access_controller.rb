@@ -5,9 +5,9 @@ class Admin::AccessController < ApplicationController
   end
 
   def update
-    @pref = Preference.find(params[:id])
-    @pref.update(access_params)
-    if @pref.save
+    @preference = Preference.find(params[:id])
+    @preference.update(access_params)
+    if @preference.save
       redirect_to admin_access_index_path, alert: "Preference saved"
     else
       render "index"

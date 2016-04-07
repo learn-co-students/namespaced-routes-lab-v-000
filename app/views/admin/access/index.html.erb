@@ -1,11 +1,13 @@
 <h2>Edit Access Form</h2>
 
-<%= form_for @preference, url: admin_access_path(@pref) do |f| %>
-  <%= f.label :allow_create_artists %>
-  <%= f.check_box :allow_create_artists %><br>
+<%= form_for @preference, url: admin_access_path(@preference) do |f| %>
+  <%= f.label :allow_create_artists %><br>
+  True: <%= f.radio_button :allow_create_artists, "true" %>
+  False: <%= f.radio_button :allow_create_artists, "false" %><br>
 
-  <%= f.label :allow_create_songs %>
-  <%= f.check_box :allow_create_songs %><br>
+  <%= f.label :allow_create_songs %><br>
+  True: <%= f.radio_button :allow_create_songs, "true" %>
+  False: <%= f.radio_button :allow_create_songs, "false" %><br>
 
   <%= f.submit %>
 <% end %>
