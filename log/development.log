@@ -2168,3 +2168,6 @@ Migrating to AddDefaultSortOrdersToPreferences (20160407174831)
             FROM sqlite_temp_master
             WHERE name='index_songs_on_artist_id' AND type='index'
 
+  [1m[36mPreference Load (0.1ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
+  [1m[35mPreference Load (0.2ms)[0m  SELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1
+  [1m[36mPreference Load (0.2ms)[0m  [1mSELECT  "preferences".* FROM "preferences"  ORDER BY "preferences"."id" ASC LIMIT 1[0m
