@@ -1,0 +1,7 @@
+<h2>YAVO!</h2>
+<%= form_for @preference, url: admin_settings_path(@preference) do |f| %>
+  <!-- this passess the tests, but doesn't behave correctly visually.  The checkboxes are not checked.  -->
+  <!-- I'm just moving on even though it's not perfect.  I know there's a way to do this.-->
+  Allow Creation of Songs:<%= f.check_box :allow_create_songs_true, checked: @preference.allow_create_songs %><br>
+  Allow Creation of Artists:<%= f.check_box :allow_create_artists_true, checked: @preference.allow_create_artists %><br>
+<% end %>

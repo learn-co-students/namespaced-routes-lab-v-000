@@ -16,7 +16,7 @@ RSpec.describe Admin::AccessController, type: :controller do
 
   end
 
-   describe "#update" do
+  describe "#update" do
     it "returns http success" do
       pref = Preference.create(allow_create_songs: true, song_sort_order: "DESC")
       patch :update, id: pref.id, preference: {allow_create_songs: false, id: pref.id}
