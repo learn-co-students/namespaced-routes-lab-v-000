@@ -42,4 +42,3 @@ respectively, if that preference is disabled.
 ![Happy Gilmore](http://i.giphy.com/h2Q9ZYee54UOk.gif)
 
 <p data-visibility='hidden'>View <a href='https://learn.co/lessons/namespaced-routes-lab' title='Objectives'>Objectives</a> on Learn.co and start learning to code for free.</p>
-
