@@ -1,5 +1,8 @@
 class SongsController < ApplicationController
-  def index
+    def index
+    pref = Preference.first_or_create(song_sort_order: "DESC")
+    pref.song_sort_order = "DESC" if pref.song_sort_order.blank?
+
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
       if @artist.nil?
@@ -8,7 +11,7 @@ class SongsController < ApplicationController
         @songs = @artist.songs
       end
     else
-      @songs = Song.all
+      @songs = Song.all.order(title: pref.song_sort_order)
     end
   end
 
@@ -25,7 +28,12 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    pref = Preference.first
+    if pref && !pref.allow_create_songs
+      redirect_to songs_path
+    else
+      @song = Song.new
+    end
   end
 
   def create
@@ -67,4 +75,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
