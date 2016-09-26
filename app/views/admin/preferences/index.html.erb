@@ -1,0 +1,7 @@
+<h1>Preferences: </h1>
+<%= form_for @preference = Preference.new do |f|  %>
+  <%= f.label :allow_create_songs %>
+  <%= f.select :allow_create_songs %>
+
+  <%= f.submit %>
+<% end %>

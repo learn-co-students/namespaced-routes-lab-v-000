@@ -25,7 +25,22 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    preference = Preference.find_by(id: 1)
+    if preference.allow_create_songs
+      @song = Song.new
+    else
+      redirect_to songs_path, alert: "Create Song has been disabled"
+    end
+  end
+
+  def create
+    @song = Song.new(song_params)
+
+    if @song.save
+      redirect_to @song
+    else
+      render :new
+    end
   end
 
   def create
