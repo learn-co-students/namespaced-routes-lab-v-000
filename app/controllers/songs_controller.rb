@@ -5,10 +5,18 @@ class SongsController < ApplicationController
       if @artist.nil?
         redirect_to artists_path, alert: "Artist not found"
       else
-        @songs = @artist.songs
+        if (Preference.first && Preference.first.song_sort_order == "ASC")
+          @songs = @artist.songs.sort { |a, b| a.title <=> a.title }
+        else
+          @songs = @artist.songs.sort { |a, b| b.title <=> a.title }
+        end
       end
     else
-      @songs = Song.all
+      if (Preference.first && Preference.first.song_sort_order == "ASC")
+        @songs = Song.all.sort { |a, b| a.title <=> b.title }
+      else
+        @songs = Song.all.sort { |a, b| b.title <=> a.title }
+      end
     end
   end
 
@@ -25,7 +33,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if (Preference.first.allow_create_songs) 
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
