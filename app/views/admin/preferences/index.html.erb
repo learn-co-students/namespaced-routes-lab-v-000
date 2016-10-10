@@ -1,0 +1,12 @@
+<h2>Current Preferences</h2>
+
+<ul>
+  <li><p>Artist Index Order: <%= @preferences.artist_sort_order.upcase %></p></li>
+  <li><p>Song Index Order: <%= @preferences.song_sort_order.upcase %></p></li>
+  <% @preferences.allow_create_artists == true ? artist_create = "Enabled" : artist_create = "Disabled" %>
+  <li><p>Artist Creation: <%= artist_create %> </p></li>
+  <% @preferences.allow_create_songs == true ? song_create = "Enabled" : song_create = "Disabled" %>
+  <li><p>Song Creation: <%= song_create %> </p></li>
+</ul>
+
+<%= link_to "Edit Preferences", edit_admin_preference_path(@preferences.id) %>
