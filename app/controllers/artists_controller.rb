@@ -9,6 +9,12 @@ class ArtistsController < ApplicationController
 
   def new
     @artist = Artist.new
+    access_denied = Preference.find_by(:allow_create_artists==false)
+     if  access_denied # --access is turned off
+      redirect_to artists_path
+    else
+      @song = Song.new
+    end
   end
 
   def create
