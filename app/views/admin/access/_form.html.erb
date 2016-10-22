@@ -1,0 +1,11 @@
+<%= form_for [:admin, @preference] do |p| %>
+
+ 
+  Can create artists: <%= p.check_box :allow_create_artists, {multiple: true}, true, false %><br>
+
+  Can create songs: <%= p.check_box :allow_create_songs, {multiple: true}, true, false %><br>
+
+  <%= p.submit %>
+
+
+<% end %>

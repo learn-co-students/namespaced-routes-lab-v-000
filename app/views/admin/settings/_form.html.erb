@@ -1,0 +1,13 @@
+<%= form_for [:admin, @preference] do |p| %>
+
+  <%= p.label :artist_sort_order %><br>
+  Default: Descending <%= p.check_box :artist_sort_order, {multiple: true}, "DESC", "ASC"  %><br>
+
+  <%= p.label :song_sort_order %><br>
+  Default: Descending <%= p.check_box :song_sort_order, {multiple: true}, "DESC", "ASC" %><br>
+ 
+
+  <%= p.submit %>
+
+
+<% end %>
