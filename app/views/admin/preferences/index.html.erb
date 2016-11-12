@@ -1,0 +1,18 @@
+<% @preferences.each do |p| %>
+  <p>
+    <%= p.artist_sort_order %>
+  </p>
+
+  <p>
+    <%= p.song_sort_order %>
+  </p>
+
+  <p>
+    <%= p.allow_create_artists %>
+  </p>
+
+  <p>
+    <%= p.allow_create_songs %>
+  </p>
+
+  <% end %>
