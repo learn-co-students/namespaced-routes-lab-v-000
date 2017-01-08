@@ -5,4 +5,9 @@ Rails.application.routes.draw do
   end
   resources :songs
 
+  root "artist#index"
+  namespace :admin do
+    resources :preferences
+  end
+
 end
