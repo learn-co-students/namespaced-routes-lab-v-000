@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    @preference = Preference.first_or_create(allow_create_artists: true,
+                                             allow_create_songs: true,
+                                             song_sort_order: "DESC",
+                                             artist_sort_order: "DESC")
+    @artists = Artist.all.order(name: @preference.artist_sort_order)
   end
 
   def show
@@ -8,7 +12,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if Preference.first.allow_create_artists
+      @artist = Artist.new
+    else
+      redirect_to artists_path
+    end
   end
 
   def create
