@@ -9,6 +9,8 @@ class ArtistsController < ApplicationController
 
   def new
     @artist = Artist.new
+
+    redirect_to artists_path
   end
 
   def create
