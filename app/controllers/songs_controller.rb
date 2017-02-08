@@ -5,7 +5,7 @@ class SongsController < ApplicationController
       if @artist.nil?
         redirect_to artists_path, alert: "Artist not found"
       else
-        @songs = @artist.songs
+        @songs = @artist.songs.sort_by{|song| song.title}
       end
     else
       @songs = Song.all
@@ -25,7 +25,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if Preference.last.allow_create_songs == true
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
