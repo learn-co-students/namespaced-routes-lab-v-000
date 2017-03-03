@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   def index
+    pref = Preference.last
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
       if @artist.nil?
@@ -10,6 +11,7 @@ class SongsController < ApplicationController
     else
       @songs = Song.all
     end
+    @songs = @songs.order(title: pref.song_sort_order) if @songs && pref
   end
 
   def show
@@ -25,6 +27,7 @@ class SongsController < ApplicationController
   end
 
   def new
+    redirect_to songs_path, alert: "You are not allowed to create songs" if !Preference.last.allow_create_songs
     @song = Song.new
   end
 
@@ -67,4 +70,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
