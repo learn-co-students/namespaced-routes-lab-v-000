@@ -1,5 +1,6 @@
 <h1>Artists</h1>
 <ul>
+  <!-- would use artist_sort(@artists) if it passed tests -->
   <% @artists.each do |artist| %>
     <li><%= link_to artist.name, artist_songs_path(artist) %></li>
   <% end %>

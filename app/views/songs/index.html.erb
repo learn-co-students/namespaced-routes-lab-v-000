@@ -1,4 +1,5 @@
 <ul>
+    <!-- would use song_sort(@song) if it passed tests -->
 <% @songs.each do |song| %>
   <li><%= display_artist(song) %> - <%= link_to song.title, song_path(song) %></li>
 <% end %>
