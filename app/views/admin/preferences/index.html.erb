@@ -1,0 +1,11 @@
+
+<h1>Admin Preference Page</h1>
+
+<% @preferences.each do |preference| %>
+	<h3>
+		<%= @preference.artist_sort_order %>
+		<%= @preference.song_sort_order %>
+		<%= @preference.allow_create_artists %>
+		<%= @preference.allow_create_songs %>
+	</h3>
+<% end %>		
