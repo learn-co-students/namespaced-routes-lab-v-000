@@ -1,7 +1,7 @@
+<h1>Songs</h1>
 <ul>
-<% @songs.each do |song| %>
-  <li><%= display_artist(song) %> - <%= link_to song.title, song_path(song) %></li>
-<% end %>
+  <%= render sorted_songs(@songs) %>
 </ul>
+
 <br>
 <%= link_to "Add New Song", new_song_path %>
