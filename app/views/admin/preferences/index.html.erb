@@ -1,0 +1,9 @@
+<h2>Admin View, Preferences</h2>
+
+<p>song sort order: <%= @preference.song_sort_order %></p>
+<p>artist sort order: <%= @preference.artist_sort_order %></p><br>
+
+<p>create new songs allowed: <%= @preference.allow_create_songs %></p>
+<p>create new artists allowed: <%= @preference.allow_create_artists %></p>
+
+<%= link_to "Edit preferences", edit_preference_path(@preference) %>
