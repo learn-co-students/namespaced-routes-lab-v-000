@@ -25,7 +25,12 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if Preference.first.allow_create_songs
+      @song = Song.new
+    else
+      flash[:alert] = "Preference settings do not allow creation of new artists"
+      redirect_to songs_path
+    end
   end
 
   def create

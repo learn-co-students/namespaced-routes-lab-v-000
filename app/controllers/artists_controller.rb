@@ -8,6 +8,12 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    if Preference.first.allow_create_artists
+      @artist = Artist.new
+    else
+      flash[:alert] = "Preference settings do not allow creation of new artists"
+      redirect_to artists_path
+    end
     @artist = Artist.new
   end
 
