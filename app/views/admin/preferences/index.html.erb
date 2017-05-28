@@ -1,0 +1,25 @@
+<%= form_for @preference, url: admin_preference_path(@preference) do |f| %>
+  <div class='field'>
+    <%= f.label :song_sort_order %>:
+    <%= f.select :song_sort_order, ['ASC', 'DESC'], prompt: 'Select One' %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :artist_sort_order %>:
+    <%= f.select :artist_sort_order, ['ASC', 'DESC'], prompt: 'Select One' %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :allow_create_songs %>:
+    <%= f.select :allow_create_songs, [true, false], prompt: 'Select One' %>
+  </div>
+
+  <div class='field'>
+    <%= f.label :allow_create_artists %>:
+    <%= f.select :allow_create_artists, [true, false], prompt: 'Select One' %>
+  </div>
+
+  <div class='action'>
+    <%= f.submit %>
+  </div>
+<% end %>
