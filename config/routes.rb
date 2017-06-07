@@ -5,4 +5,8 @@ Rails.application.routes.draw do
   end
   resources :songs
 
+  namespace :admin do
+      get '/preferences' => 'preferences#index'
+  end
+
 end

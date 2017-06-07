@@ -1,4 +1,7 @@
 class ArtistsController < ApplicationController
+
+  before_action :ensure_create_enabled, only: [:new, :create]
+
   def index
     @artists = Artist.all
   end
@@ -48,5 +51,9 @@ class ArtistsController < ApplicationController
 
   def artist_params
     params.require(:artist).permit(:name)
+  end
+
+  def ensure_create_enabled
+      redirect_to artists_path unless Preference.default.allow_create_artists
   end
 end
