@@ -8,7 +8,12 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if Preference.last.artist_admin?
+      redirect_to artists_path
+    else      
+      @artist = Artist.new
+    end
+  
   end
 
   def create
@@ -49,4 +54,9 @@ class ArtistsController < ApplicationController
   def artist_params
     params.require(:artist).permit(:name)
   end
+
+  def artist_sort
+
+  end
+  
 end
