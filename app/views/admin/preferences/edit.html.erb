@@ -1,0 +1,16 @@
+<h1>Edit a Preference</h1>
+<%= form_tag admin_preference_path(@preference), method: "patch" do %>
+  <%= label_tag :song_sort_order %>
+  <%= text_field_tag "song_sort_order", @preference.song_sort_order %>
+  <br>
+  <%= label_tag :artist_sort_order %>
+  <%= text_field_tag "artist_sort_order", @preference.artist_sort_order %>
+  <br>
+  <%= label_tag :allow_create_artists %>
+  <%= text_field_tag "allow_create_artists", @preference.allow_create_artists %>
+  <br>
+  <%= label_tag :allow_create_songs %>
+  <%= text_field_tag "allow_create_songs", @preference.allow_create_songs %>
+  <br>
+  <%= submit_tag "Edit Preference" %>
+<% end %>

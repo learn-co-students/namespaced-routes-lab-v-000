@@ -1,0 +1,12 @@
+<h1>Preference show page</h1>
+
+<p>Song Sort: <%= @preference.song_sort_order %></p>
+<p>Artist Sort: <%= @preference.artist_sort_order %></p>
+<p>Artist creation: <%= @preference.allow_create_artists %></p>
+<p>Song creation: <%= @preference.allow_create_songs %></p>
+
+<%= link_to "Edit Preference", edit_admin_preference_path(@preference) %>
+
+<%= form_tag admin_preference_path(@preference), method: "delete" do %>
+<%= submit_tag "Delete" %>
+<% end %>
