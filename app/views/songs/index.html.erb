@@ -1,5 +1,5 @@
 <ul>
-<% @songs.each do |song| %>
+<% song_sorted_list(@songs, song_sort_preference).each do |song| %>
   <li><%= display_artist(song) %> - <%= link_to song.title, song_path(song) %></li>
 <% end %>
 </ul>
