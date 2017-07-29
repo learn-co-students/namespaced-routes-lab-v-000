@@ -1,6 +1,8 @@
 class ArtistsController < ApplicationController
+  @@preference = Preference.last
   def index
     @artists = Artist.all
+    @preference = @@preference if @@preference
   end
 
   def show
@@ -8,7 +10,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if Preference.last.allow_create_artists
+      @artist = Artist.new
+    else
+      redirect_to artists_path
+    end
   end
 
   def create
