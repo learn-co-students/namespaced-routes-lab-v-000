@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    pref = Preference.first
+    @artists = pref.present? ? Artist.ordered_by_name : Artist.all
   end
 
   def show
@@ -8,7 +9,13 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    allowed = Preference.first.allow_create_artists
+    if allowed
+      @artist = Artist.new
+    else
+      redirect_to artists_path
+    end
+    
   end
 
   def create
