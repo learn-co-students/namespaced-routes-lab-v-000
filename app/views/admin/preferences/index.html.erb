@@ -1,0 +1,26 @@
+<h2>Song/Artist Administration</h2>
+  <%= form_for @preferences, url: admin_preference_path(@preferences) do |f| %>
+    <p>
+      <%= f.label :artist_sort_order %>
+      <%= f.select :artist_sort_order, options_for_select([["ASC"], ["DESC"]], f.object.artist_sort_order) %>
+    </p>
+
+    <p>
+      <%= f.label :song_sort_order %>
+      <%= f.select :song_sort_order, options_for_select([["ASC"], ["DESC"]], f.object.song_sort_order) %>
+    </p>
+
+    <p>
+      <%= f.label :allow_create_artists, "Allow Artist Creation" %>
+      <%= f.check_box :allow_create_artists %>
+    </p>
+
+    <p>
+      <%= f.label :allow_create_songs, "Allow Song Creation" %>
+      <%= f.check_box :allow_create_songs %>
+    </p>
+
+    <p>
+      <%= f.submit "Update Preferences" %>
+    </p>
+  <% end %>
