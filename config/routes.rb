@@ -5,4 +5,10 @@ Rails.application.routes.draw do
   end
   resources :songs
 
+  namespace :admin do
+    resources :access, only: [:index, :update]
+    resources :preferences
+    resources :settings, only: [:index, :update]
+  end
+
 end

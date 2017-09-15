@@ -8,7 +8,14 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    @preference = Preference.first
+    if @preference.allow_create_artists == true
+      @artist = Artist.new
+      render :new
+    else
+      flash[:alert] = "Adding New Artist is disabled!"
+      redirect_to artists_path
+    end
   end
 
   def create
