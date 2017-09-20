@@ -5,6 +5,8 @@ RSpec.describe SongsController do
   before do
     Song.destroy_all
     Artist.destroy_all
+    Preference.destroy_all
+    @prefs = Preference.create(song_sort_order: 'ASC', artist_sort_order: 'DESC', allow_create_artists: true, allow_create_songs: true)
     @artist = Artist.create(name: "Garth Brooks")
     @song = @artist.songs.create(title: "I'm def not Chris Gaines, Everyone haha what are you talking about?")
   end
@@ -22,9 +24,10 @@ RSpec.describe SongsController do
     end
 
   end
-  
+
   describe "GET new" do
     it "redirects when access is turned off" do
+      Preference.destroy_all
       p = Preference.create(allow_create_songs: false)
       get :new
       expect(response).to redirect_to songs_path

@@ -6,9 +6,11 @@ class SongsController < ApplicationController
         redirect_to artists_path, alert: "Artist not found"
       else
         @songs = @artist.songs
+        @song_sort = Preference.last.song_sort_order
       end
     else
       @songs = Song.all
+      @song_sort = Preference.last.song_sort_order
     end
   end
 
@@ -25,7 +27,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if Preference.last.allow_create_songs
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
@@ -68,3 +74,4 @@ class SongsController < ApplicationController
   end
 end
 
+p = Preference.new(song_sort_order: 'asc', artist_sort_order: 'asc', allow_create_artists: true, allow_create_songs: true)
