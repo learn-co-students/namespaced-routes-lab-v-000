@@ -1,14 +1,17 @@
 class SongsController < ApplicationController
   def index
+    @preference = Preference.all.last
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
       if @artist.nil?
         redirect_to artists_path, alert: "Artist not found"
       else
-        @songs = @artist.songs
+        @songs = @artist.songs.sort {|a,b| a.title <=> b.title}
+        @songs.reverse! if @preference && @preference.artist_sort_order == "DESC"
       end
     else
-      @songs = Song.all
+      @songs = Song.all.sort {|a,b| a.title <=> b.title}
+      @songs.reverse! if @preference && @preference.artist_sort_order == "DESC"
     end
   end
 
@@ -25,7 +28,12 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    @preference = Preference.all.last
+    if !@preference || @preference.allow_create_songs
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
@@ -67,4 +75,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
