@@ -1,3 +1,4 @@
+<h1>Flatiron Tunes Library</h1>
 <ul>
 <% @songs.each do |song| %>
   <li><%= display_artist(song) %> - <%= link_to song.title, song_path(song) %></li>
@@ -5,3 +6,5 @@
 </ul>
 <br>
 <%= link_to "Add New Song", new_song_path %>
+<br>
+<%= link_to "Add New Artist", new_artist_path %>
