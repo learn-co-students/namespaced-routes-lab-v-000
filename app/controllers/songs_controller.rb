@@ -8,7 +8,10 @@ class SongsController < ApplicationController
         @songs = @artist.songs
       end
     else
-      @songs = Song.all
+
+      sort = Preference.find(1).artist_sort_order
+      @songs = Song.order(title: sort)
+
     end
   end
 
@@ -25,7 +28,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if Preference.find(1).allow_create_songs == true
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
