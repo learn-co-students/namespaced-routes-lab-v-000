@@ -1,0 +1,8 @@
+<% @preferences.each do |pref| %>
+  <div>
+    <%= preference.artist_sort_order %>
+    <%= preference.song_sort_order %>
+    <%= preference.allow_create_songs %>
+    <%= preference.allow_create_artists %>
+  </div>
+<% end %>
