@@ -1,0 +1,13 @@
+<h1>Edit Preferences</h1>
+
+<%= form_for [:admin, @preference] do |f| %>
+  <%= f.label :song_sort_order %>
+  <%= f.select(:song_sort_order, ['asc', 'desc']) %>
+  <%= f.label :artist_sort_order %>
+  <%= f.select(:artist_sort_order, ['asc', 'desc']) %>
+  <%= f.label :allow_create_songs %>
+  <%= f.check_box :allow_create_songs %>
+  <%= f.label :allow_create_artists %>
+  <%= f.check_box :allow_create_artists %>
+  <%= f.submit %>
+<% end %>
