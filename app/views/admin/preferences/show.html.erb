@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Artist sort order:</strong>
+  <%= @preference.artist_sort_order %>
+</p>
+
+<p>
+  <strong>Song sort order:</strong>
+  <%= @preference.song_sort_order %>
+</p>
+
+<p>
+  <strong>Allow create artists:</strong>
+  <%= @preference.allow_create_artists %>
+</p>
+
+<p>
+  <strong>Allow create songs:</strong>
+  <%= @preference.allow_create_songs %>
+</p>
+
+<%= link_to 'Edit', edit_preference_path(@preference) %> |
+<%= link_to 'Back', preferences_path %>
