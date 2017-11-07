@@ -1,0 +1,9 @@
+<h1>Preferences</h1>
+
+<%= form_for(@preference) do |f| %>
+  <%= f.label :artist_sort_order %>
+  <%= f.options_for_select([['ASC', 1], ['DES', 2]]) %>
+  <%= f.label :song_sort_order %>
+  <%= f.options_for_select([['ASC', 1], ['DES', 2]]) %>
+  <%= f.submit %>
+<% end %>
