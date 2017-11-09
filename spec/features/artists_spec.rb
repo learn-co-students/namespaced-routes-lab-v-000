@@ -3,6 +3,8 @@ describe "artists", type: :feature do
   before do
     Artist.destroy_all
     Song.destroy_all
+    Preference.destroy_all
+    Preference.create(artist_sort_order: "DESC", song_sort_order: "DESC", allow_create_artists: true, allow_create_songs: true)
     @artist = Artist.create!(name: "Daft Punk")
     @song = @artist.songs.create!(title: "The Grid")
   end

@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    @artists = Artist.all.order("name #{artist_order}")
   end
 
   def show
@@ -8,7 +8,12 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if artist_create_access?
+      @artist = Artist.new
+    else
+      flash[:alert] = "You do not have permission to create a new artist."
+      redirect_to artists_path
+    end
   end
 
   def create
@@ -46,7 +51,15 @@ class ArtistsController < ApplicationController
 
   private
 
-  def artist_params
-    params.require(:artist).permit(:name)
-  end
+    def artist_params
+      params.require(:artist).permit(:name)
+    end
+
+    def artist_order
+      Preference.last.artist_sort_order
+    end
+
+    def artist_create_access?
+      Preference.last.allow_create_artists == true
+    end
 end

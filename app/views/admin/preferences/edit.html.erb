@@ -1,0 +1,14 @@
+<!--admin/preferences/edit.html.erb -->
+
+<%= form_for @preference do |f| %>
+  <%= f.label :artist_sort_order %> <br>
+  <%= f.select :artist_sort_order, ["ASC", "DESC"] %> <br>
+  <%= f.label :song_sort_order %> <br>
+  <%= f.select :song_sort_order, ["ASC", "DESC"] %> <br>
+  <%= f.label :allow_create_artists %><br>
+  <%= f.select :allow_create_artists, [true, false] %> <br>
+  <%= f.label :allow_create_songs %><br>
+  <%= f.select :allow_create_songs, [true, false] %> <br>
+
+  <%= f. submit %>
+<% end %>
