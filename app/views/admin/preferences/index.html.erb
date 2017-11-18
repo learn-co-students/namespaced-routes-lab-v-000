@@ -1,0 +1,8 @@
+<%= form_for(@preference) do |p| %>
+	Artist Order: <%= p.select :artist_sort_order, options_for_select(sort_order_options) %><br>
+	Song Order: <%= p.select :song_sort_order, options_for_select(sort_order_options) %><br>
+	Allow New Artists? <%= p.select :allow_create_artists, affirmations %><br>
+	Allow New Songs? <%= p.select :allow_create_songs, affirmations %><br>
+
+	<%= p.submit %>
+<% end %>

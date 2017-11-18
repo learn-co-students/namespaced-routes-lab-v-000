@@ -1,4 +1,6 @@
 class SongsController < ApplicationController
+  before_action :user_preferences
+
   def index
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
@@ -25,6 +27,7 @@ class SongsController < ApplicationController
   end
 
   def new
+    redirect_to songs_path if user_preferences.allow_create_songs == false
     @song = Song.new
   end
 
