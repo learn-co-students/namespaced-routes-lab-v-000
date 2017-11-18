@@ -25,7 +25,12 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if Preference.all.pluck(:allow_create_songs)
+      redirect_to songs_path
+    else
+      @song = Song.new
+    end
+
   end
 
   def create
