@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   def index
+    set_preferences
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
       if @artist.nil?
@@ -7,6 +8,8 @@ class SongsController < ApplicationController
       else
         @songs = @artist.songs
       end
+    elsif @preferences && @preferences.song_sort_order
+      @songs = Song.order(title: @preferences.song_sort_order)
     else
       @songs = Song.all
     end
@@ -25,7 +28,12 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    set_preferences
+    if @preferences.allow_create_artists
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
@@ -66,5 +74,8 @@ class SongsController < ApplicationController
   def song_params
     params.require(:song).permit(:title, :artist_name)
   end
-end
 
+  def set_preferences
+    @preferences = Preference.first
+  end
+end
