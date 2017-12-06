@@ -1,0 +1,10 @@
+<h1>Preferences</h1>
+<% @preferences.each do |p| %>
+  <h4>Preference #<%= p.id %></h4>
+  <ul>
+    <% unless p.allow_create_artists.nil?  %><li>Allowed to create new artists: <%= p.allow_create_artists.to_s %></li><% end %>
+    <% unless p.allow_create_songs.nil?  %><li>Allowed to create new songs: <%= p.allow_create_songs.to_s %></li><% end %>
+    <% unless p.artist_sort_order.empty? %><li>Preferred order for artists: <%= p.artist_sort_order %></li><% end %>
+    <% unless p.song_sort_order.empty? %><li>Preferred order for songs: <%= p.song_sort_order %></li><% end %>
+  </ul>
+<% end %>
