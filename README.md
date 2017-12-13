@@ -14,6 +14,11 @@ them separate from the regular user functions.
 
 ## Instructions
 
+t.string   "artist_sort_order"
+    t.string   "song_sort_order"
+    t.boolean  "allow_create_songs"
+    t.boolean  "allow_create_artists"
+
 The base application has been provided with tests. Make sure to run
 `rake db:seed` to set up seed data. Tests can be run with `rspec`.
 
