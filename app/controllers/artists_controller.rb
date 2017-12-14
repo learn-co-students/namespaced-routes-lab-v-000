@@ -1,6 +1,9 @@
 class ArtistsController < ApplicationController
+  include Users::Preference
+
   def index
     @artists = Artist.all
+    @artists = sort_artists(@artists)
   end
 
   def show
@@ -8,7 +11,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if allow_create_artist?
+      @artist = Artist.new
+    else
+      redirect_to artists_path
+    end
   end
 
   def create
