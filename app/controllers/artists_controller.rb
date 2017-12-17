@@ -9,6 +9,15 @@ class ArtistsController < ApplicationController
 
   def new
     @artist = Artist.new
+    if !Preference.all[0].allow_create_artists
+      redirect_to artists_path
+    else
+      if Preference.all[0].artist_sort_order == "ASC"
+        @artists = @artists.sort
+      else @artists = @artists.sort .reverse 
+      end
+      redirect_to artist_path(@artist)
+    end
   end
 
   def create
