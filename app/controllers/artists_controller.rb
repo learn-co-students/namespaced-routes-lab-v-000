@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+  before_action :set_preferences, only: [:index, :new]
+
   def index
     @artists = Artist.all
   end
@@ -8,7 +10,12 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    
+    if @preferences && @preferences.allow_create_artists == false 
+      redirect_to artists_path
+    else 
+      @artist = Artist.new 
+    end 
   end
 
   def create
@@ -43,6 +50,10 @@ class ArtistsController < ApplicationController
     flash[:notice] = "Artist deleted."
     redirect_to artists_path
   end
+  
+  def set_preferences
+    @preferences = Preference.first 
+  end 
 
   private
 

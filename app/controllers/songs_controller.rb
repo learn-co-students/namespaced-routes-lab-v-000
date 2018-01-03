@@ -1,4 +1,6 @@
 class SongsController < ApplicationController
+  before_action :set_preferences, only: [:index, :new]
+  
   def index
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
@@ -25,7 +27,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if @preferences && @preferences.allow_create_songs == false 
+      redirect_to songs_path 
+    else 
+      @song = Song.new
+    end 
   end
 
   def create
@@ -60,6 +66,10 @@ class SongsController < ApplicationController
     flash[:notice] = "Song deleted."
     redirect_to songs_path
   end
+  
+  def set_preferences
+    @preferences = Preference.first 
+  end 
 
   private
 
