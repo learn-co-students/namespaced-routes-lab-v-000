@@ -25,8 +25,16 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    @new_song_check = Preference.new
+    # ISSUE: in Artists controller, this was wrong
+    # This should be creating the new instance, not redirecting when true, right? The test says this is correct.
+    if @new_song_check.allow_create_songs
+      redirect_to songs_path
+    else
+      @song = Song.new
+    end
   end
+
 
   def create
     @song = Song.new(song_params)
