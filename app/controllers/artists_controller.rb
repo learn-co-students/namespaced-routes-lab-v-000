@@ -1,4 +1,7 @@
 class ArtistsController < ApplicationController
+
+  before_action :preferences, only: [:index, :new]
+  
   def index
     @artists = Artist.all
   end
@@ -8,8 +11,18 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if @preference && !@preference.allow_create_artists
+      redirect_to artists_path
+    else
+      @artist = Artist.new
+    end
   end
+
+
+  # 1) ArtistsController GET new redirects when access is turned off
+  #     Failure/Error: expect(response).to redirect_to artists_path
+  #       Expected response to be a <redirect>, but was <200>
+
 
   def create
     @artist = Artist.new(artist_params)
@@ -48,5 +61,9 @@ class ArtistsController < ApplicationController
 
   def artist_params
     params.require(:artist).permit(:name)
+  end
+
+  def preferences
+    @preference = Preference.first
   end
 end
