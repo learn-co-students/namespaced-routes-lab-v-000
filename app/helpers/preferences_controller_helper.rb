@@ -1,0 +1,2 @@
+module PreferencesControllerHelper
+end
