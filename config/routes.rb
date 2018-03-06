@@ -5,4 +5,13 @@ Rails.application.routes.draw do
   end
   resources :songs
 
+  root 'songs#index'
+
+  namespace :admin do
+    resources :preferences, only: [:index]
+  end
+
+  scope '/admin', module: 'admin' do
+    resources :preferences, only: [:index]
+  end
 end
