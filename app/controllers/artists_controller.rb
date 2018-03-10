@@ -1,5 +1,7 @@
 class ArtistsController < ApplicationController
   def index
+    pref = Preference.first_or_create(artist_sort_order: "DESC")
+    pref.artist_sort_order = "DESC" if pref.artist_sort_order.blank?
     @artists = Artist.all
   end
 
@@ -8,7 +10,12 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    pref = Preference.first
+    if pref && !pref.allow_create_artists
+      redirect_to artists_path
+    else
+      @artist = Artist.new
+    end
   end
 
   def create
