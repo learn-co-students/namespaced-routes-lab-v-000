@@ -8,17 +8,25 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+  	pref = Preference.first
+  	if pref.allow_create_artists
+  		@artist = Artist.new
+  	 else
+    	redirect_to artists_path
+    end
   end
 
   def create
-    @artist = Artist.new(artist_params)
+  
+  	  @artist = Artist.new(artist_params)
 
-    if @artist.save
-      redirect_to @artist
-    else
-      render :new
-    end
+    	if @artist.save
+      	redirect_to @artist
+    	else
+      	render :new
+    	end
+   
+    
   end
 
   def edit
