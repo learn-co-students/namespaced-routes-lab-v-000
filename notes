@@ -1,0 +1,69 @@
+Create a Preference model that will store preferences for the app. It will need to have fields for:
+
+# rails g model Preference artist_sort_order:string song_sort_order:string allow_create_artists:boolean allow_create_songs:boolean --no-test-framework
+# rake db:migrate
+# rake db:seed
+
+
+          Song sort order (e.g. "ASC" or "DESC"). This will be used to control the default sort order on the /songs page.
+
+
+          Artist sort order. This will be used to control the default sort order on the /artists page.
+
+
+          Allowing creation of new songs. Used to control the ability to add new songs to the system.
+
+
+          Allowing creation of new artists. Used to control the ability to add new artists to the system.
+
+
+Create a PreferencesController, routes, and views to manage the preferences. Do this under an Admin module to separate it from the standard user functionality.
+          #app/controllers/admin/preferences_controller.rb
+                  #with distinguishing that the class is a module
+
+
+          #modify app/config.routes.rb file with namespace for admin
+
+          #app/views/admin/preferences
+          #setup views/admin/preferences/index.html.erb file
+                #create a form to enable/disable admin preference
+                #this form_for uses radio buttons to manipulate the cadmin preferences
+          #PreferencesController setup index action so that view file can work off the @preference through a first_or_create action
+
+          #lets be able to update the preferences
+                #in our config/routes.rb file, include :update in our namespace preferences resources
+                #in our PreferencesController, add a private strong params action called preference_params that allows us to change the instances attributes
+                #in our PreferencesController, add an update action that
+                        #finds the current params being worked on
+                        #updates with strong params
+                        #redirects back to the preferences index page
+
+          #lets modify our Artist Controller to be able to interpret the preferences that we setup
+                ARTIST SORT
+                #create a private action set_preferences that sets the first instance of a Preference as a variable that can be used
+                #as the first line of code in our Artist Controller, setup a before action that runs the set_preferences action on the index and new actions so that the index and new actions have a preference variable ready to operate on
+                ##if preferences exist, and there is a artist_sort_order attribute for preferences, then
+                #  #create a variable with a hash of all of the Artists that are orders by name, depending on the artist_sort_order attribute for the preferences)  else
+                # have a variable that lists all Artists without ordering
+
+                ARTIST ABILITY TO CREATE NEW SONGS
+                ##if preferences exist and the user does not have a preference allowing them to create an artist then send the user back to the artists index
+                ##else (meaning preferences exist and the user has access to create a new artist), instantiate a new artist without persisting to db
+          #lets modify Song controller in the same manner as Artist controller
+                #set before actions
+                #modify the Song index action, to interpret preferences with params artist_id included and not included
+                #setup new
+
+
+
+
+
+
+
+Update the artists and songs index pages to order by name according to each preference.
+
+
+Update the songs#new and artists#new actions to check that creating new songs or artists is enabled, and redirect to /songs and /artists, respectively, if that preference is disabled.
+
+
+Make sure tests pass.
