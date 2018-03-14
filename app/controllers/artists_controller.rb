@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+  include ApplicationHelper
+
   def index
     @artists = Artist.all
   end
@@ -8,7 +10,12 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    get_preferences
+    if !@preferences.allow_create_artists
+      redirect_to artists_path , alert: "Artist creation is not allowed at this time"
+    else
+      @artist = Artist.new
+    end
   end
 
   def create

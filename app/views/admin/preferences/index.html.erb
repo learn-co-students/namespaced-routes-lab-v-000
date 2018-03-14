@@ -1,0 +1,12 @@
+<h1>Preferences</h1>
+
+<h3>Sort Artists:</h3>
+<p><%=@preferences.artist_sort_order%></p>
+<h3>Sort Songs:</h3>
+<p><%=@preferences.song_sort_order%></p>
+<h3>Song Creation Enabled:</h3>
+<p><%=@preferences.allow_create_artists%></p>
+<h3>Artist Creation Enabled:</h3>
+<p><%= @preferences.allow_create_songs%></p>
+
+<%= link_to  "Edit Preferences", edit_admin_preference_path(1) %>
