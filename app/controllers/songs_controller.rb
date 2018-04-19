@@ -8,7 +8,11 @@ class SongsController < ApplicationController
         @songs = @artist.songs
       end
     else
-      @songs = Song.all
+      if current_preference && current_preference.song_sort_order == "ASC"
+        @songs = Song.order(title: :asc)
+      else
+        @songs = Song.order(title: :desc)
+      end
     end
   end
 
@@ -25,7 +29,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if current_preference && current_preference.allow_create_songs
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
@@ -67,4 +75,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
