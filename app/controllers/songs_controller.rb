@@ -1,4 +1,6 @@
 class SongsController < ApplicationController
+  before_action :set_preferences
+
   def index
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
@@ -25,7 +27,11 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if @preferences.allow_create_songs == true
+      @song = Song.new
+    else
+      redirect_to songs_path
+    end
   end
 
   def create
@@ -63,8 +69,11 @@ class SongsController < ApplicationController
 
   private
 
+  def set_preferences
+    @preferences = Preference.first
+  end
+
   def song_params
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
