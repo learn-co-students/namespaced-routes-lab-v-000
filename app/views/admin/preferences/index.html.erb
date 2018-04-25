@@ -1,0 +1,38 @@
+<h1>Manage Library Preferences</h1>
+
+<%= form_for @preferences do |f| %>
+  <div>
+    <h3>Song Sort Order</h3>
+    <%= f.label :sort_order_ASC, 'Ascending' %>
+    <%= f.radio_button :sort_order, 'ASC' %>
+    <%= f.label :sort_order_DESC, 'Descending' %>
+    <%= f.radio_button :sort_order, 'DESC' %>
+  </div>
+
+  <div>
+    <h3>Artist Sort Order</h3>
+    <%= f.label :artist_sort_order_ASC, 'Ascending' %>
+    <%= f.radio_button :artist_sort_order, "ASC" %>
+    <%= f.label :artist_sort_order_DESC, 'Descending' %>
+    <%= f.radio_button :artist_sort_order, "DESC" %>
+  </div>
+
+  <div>
+    <h3>Permission To Create Songs</h3>
+    <%= f.label :allows_creation_of_songs_true, 'Allowed To Create' %>
+    <%= f.radio_button :allows_creation_of_songs, true %>
+    <%= f.label :allows_creation_of_songs_false 'Forbidden To Create'%>
+    <%= f.radio_button :allows_creation_of_songs, false %>
+  </div>
+
+  <div>
+    <h3>Permission To Create Artists</h3>
+    <%= f.label :allows_creation_of_artists_true, 'Allowed To Create' %>
+    <%= f.radio_button :allows_creation_of_artists, true %>
+    <%= f.label :allows_creation_of_artists_false 'Forbidden To Create'%>
+    <%= f.radio_button :allows_creation_of_artists, false %>
+  </div>
+
+  <%= f.submit 'Save Settings' %>
+
+<% end %>
