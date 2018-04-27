@@ -6,6 +6,7 @@ RSpec.describe Song, type: :model do
     Song.destroy_all
     @artist = Artist.create!(name: "Daft Punk")
     @grid = @artist.songs.create!(title: "The Grid")
+    p = Preference.create(allow_create_songs: true)
   end
 
   it "gets the artist name" do

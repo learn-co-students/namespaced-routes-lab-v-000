@@ -5,6 +5,7 @@ describe "songs", type:  :feature do
     Song.destroy_all
     @artist = Artist.create!(name: "Daft Punk")
     @song = @artist.songs.create!(title: "The Grid")
+    p = Preference.create(allow_create_songs: true)
   end
 
   context "when nested under artists" do

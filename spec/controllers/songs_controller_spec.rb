@@ -7,6 +7,7 @@ RSpec.describe SongsController do
     Artist.destroy_all
     @artist = Artist.create(name: "Garth Brooks")
     @song = @artist.songs.create(title: "I'm def not Chris Gaines, Everyone haha what are you talking about?")
+    p = Preference.create(allow_create_songs: false)
   end
 
   describe "GET index" do
