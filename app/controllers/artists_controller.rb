@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+  before_action :set_preferences, only: [:index, :new]
+  
   def index
     @artists = Artist.all
   end
@@ -8,7 +10,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if @preferences && @preferences.allow_create_artists
+      @artist = Artist.new
+    else
+      redirect_to artists_path, alert: "unable to create artists at this time"
+    end
   end
 
   def create
@@ -49,4 +55,9 @@ class ArtistsController < ApplicationController
   def artist_params
     params.require(:artist).permit(:name)
   end
+  
+  def set_preferences
+    @preferences = Preference.first
+  end
+  
 end
