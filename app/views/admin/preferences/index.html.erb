@@ -1,0 +1,16 @@
+<h1>Preferences</h1>
+
+
+<%= form_tag '/admin/preferences', method: :patch do %>
+  <%= label_tag :artist_sort_order %>
+  <%= select_tag :artist_sort_order, options_for_select(['ASC', 'DESC'], @preferences.artist_sort_order) %><br>
+  <%= label_tag :song_sort_order %>
+  <%= select_tag :song_sort_order, options_for_select(['ASC', 'DESC'], @preferences.song_sort_order) %><br>
+  <%= label_tag :allow_create_artists %>
+  <%= check_box_tag :allow_create_artists, 1, @preferences.allow_create_artists %><br>
+  <%= label_tag :allow_create_songs %>
+  <%= check_box_tag :allow_create_songs, 1, @preferences.allow_create_songs %><br>
+
+  <%= submit_tag 'Save Preferences' %>
+<% end %>
+
