@@ -1,6 +1,9 @@
 class ArtistsController < ApplicationController
+
   def index
-    @artists = Artist.all
+    init_preferences if Preference.all.empty?
+
+    @artists = Artist.all.order("name #{Preference.last.artist_sort_order}")
   end
 
   def show

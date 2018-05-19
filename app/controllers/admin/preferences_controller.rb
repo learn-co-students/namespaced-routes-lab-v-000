@@ -1,9 +1,5 @@
 class Admin::PreferencesController < ApplicationController
   def index
-    if Preference.all.empty?
-      Preference.create
-    end
-
     @preferences = Preference.last
   end
 
