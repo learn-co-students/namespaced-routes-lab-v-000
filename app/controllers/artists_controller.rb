@@ -8,7 +8,9 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    # Not sure I completely understand why it has to be Preference.first or Preference.last
+    @preferences = Preference.first
+    @preferences.allow_create_artists ? (@artist = Artist.new) : (redirect_to artists_path)
   end
 
   def create
