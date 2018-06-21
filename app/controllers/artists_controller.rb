@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
   def index
     @artists = Artist.all
+    @preference = Preference.find_by(id: params[:id])
   end
 
   def show
@@ -9,6 +10,14 @@ class ArtistsController < ApplicationController
 
   def new
     @artist = Artist.new
+    artist_creation_access
+  end
+
+  def artist_creation_access
+    preference = Preference.first
+    if preference &&  !preference.allow_create_songs
+      redirect_to artists_path
+    end
   end
 
   def create
