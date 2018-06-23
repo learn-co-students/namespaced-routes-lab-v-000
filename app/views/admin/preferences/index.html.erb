@@ -1,0 +1,23 @@
+<h1>Preferences</h1>
+<h3>Artist</h3>
+  <%= form_for @preference, url: admin_preference_path(@preference)  do |f| %>
+    <div>
+      <%= f.label :artist_sort_order %>
+      <%= f.select :artist_sort_order, [['ASC', 'ASC'],['DESC', 'DESC']] %>
+    </div>
+    <div>
+      <%= f.label :allow_create_artists %>
+      <%= f.check_box :allow_create_artists %>
+    </div>
+
+    <h3>Song</h3>
+    <div>
+      <%= f.label :song_sort_order %>
+      <%= f.select :artist_sort_order, [['ASC', 'ASC'],['DESC', 'DESC']] %>
+    </div>
+    <div>
+      <%= f.label :allow_create_songs %>
+      <%= f.check_box :allow_create_songs %>
+    </div>
+  <%= f.submit %>
+<% end %>
