@@ -1,5 +1,5 @@
 class Admin::PreferencesController < ApplicationController
     def index
-        raise "HELLO!"
+        @preferences = Preference.take
     end
 end
