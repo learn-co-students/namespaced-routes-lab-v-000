@@ -8,6 +8,15 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    # If we had sessions, we would of course check
+    # the logged-in user's preferences,
+    # not the one Preference we've created for testing the flow
+    prefs = Preference.take
+    if !prefs.allow_create_artists
+      redirect_to artists_path
+      return
+    end
+
     @artist = Artist.new
   end
 
