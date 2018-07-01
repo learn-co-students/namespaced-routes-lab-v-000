@@ -1,0 +1,27 @@
+<h1>Admin: Preferences</h1>
+<%= form_for @preference, url: admin_preferences_path(@preference) do |f| %>
+<%# https://stackoverflow.com/questions/24375454/whats-the-meaning-of-url-path-in-form-for %>
+<%# to snswer why we need a url in the form_for field %>
+<%# bc we have to tell the form to post to the update action/path %>
+
+    <%= f.label :allow_create_artists %>
+    True: <%= f.radio_button :allow_create_artists, true %>
+    False: <%= f.radio_button :allow_create_artists, false %>
+<br><br>
+
+    <%= f.label :allow_create_songs %>
+    True: <%= f.radio_button :allow_create_songs, true %>
+    False: <%= f.radio_button :allow_create_songs, false %>
+<br><br>
+
+    <%= f.label :song_sort_order %>
+    DESC: <%= f.radio_button :song_sort_order, "DESC" %>
+    ASC: <%= f.radio_button :song_sort_order, "ASC" %>
+  <br><br>
+
+    <%= f.label :artist_sort_order %>
+    DESC: <%= f.radio_button :artist_sort_order, "DESC" %>
+    ASC: <%= f.radio_button :artist_sort_order, "ASC" %>
+<br><br>
+  <%= f.submit %>
+<% end %>
