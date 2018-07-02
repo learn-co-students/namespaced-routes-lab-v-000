@@ -10,4 +10,5 @@ RSpec.describe ArtistsController do
     end
   end
 
+
 end
