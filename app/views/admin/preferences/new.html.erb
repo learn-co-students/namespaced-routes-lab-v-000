@@ -1,0 +1,16 @@
+<%= form_for @preference do |p| %>
+  <p>Sort orders must be "ASC" or "DESC" and Allow creates must be "true" or "false"</p><br>
+  <%= p.label :song_sort_order %>
+  <%= p.text_field :song_sort_order %><br>
+  
+  <%= p.label :artist_sort_order %>
+  <%= p.text_field :artist_sort_order %><br>
+  
+  <%= p.label :allow_create_songs %>
+  <%= p.text_field :allow_create_songs %><br>
+  
+  <%= p.label :allow_create_artists %>
+  <%= p.text_field :allow_create_artists %><br>
+  
+  <%= p.submit %>
+<% end %>
