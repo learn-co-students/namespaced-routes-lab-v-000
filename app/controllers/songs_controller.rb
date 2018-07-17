@@ -26,6 +26,10 @@ class SongsController < ApplicationController
 
   def new
     @song = Song.new
+    p = Preference.all.first
+    if !p.allow_create_songs
+      redirect_to songs_path
+    end
   end
 
   def create
@@ -67,4 +71,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
