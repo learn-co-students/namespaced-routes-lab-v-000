@@ -1,0 +1,58 @@
+[31mF[0m[31mF[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[32m.[0m[31mF[0m[32m.[0m[32m.[0m
+
+Failures:
+
+  1) Admin::PreferencesController has an index page
+     [31mFailure/Error: [0mget [33m:index[0m[0m
+     [31m[0m
+     [31mActionController::UrlGenerationError:[0m
+     [31m  No route matches {:action=>"index", :controller=>"admin/preferences"}[0m
+     [36m# ./spec/controllers/admin/preferences_controller_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  2) ArtistsController GET new redirects when access is turned off
+     [31mFailure/Error: [0mexpect(response).to redirect_to artists_path[0m
+     [31m  Expected response to be a <redirect>, but was <200>[0m
+     [36m# ./spec/controllers/artists_controller_spec.rb:9:in `block (3 levels) in <top (required)>'[0m
+
+  3) SongsController GET new redirects when access is turned off
+     [31mFailure/Error: [0mp = [1;34;4mPreference[0m.create([35mallow_create_songs[0m: [1;36mfalse[0m)[0m
+     [31m[0m
+     [31mActiveRecord::UnknownAttributeError:[0m
+     [31m  unknown attribute 'allow_create_songs' for Preference.[0m
+     [36m# ./spec/controllers/songs_controller_spec.rb:28:in `block (3 levels) in <top (required)>'[0m
+     [36m# ------------------[0m
+     [36m# --- Caused by: ---[0m
+     [36m# NoMethodError:[0m
+     [36m#   undefined method `allow_create_songs=' for #<Preference:0x007fce4f9b69f8>[0m
+     [36m#   Did you mean?  allow_create_artists=[0m
+     [36m#   ./spec/controllers/songs_controller_spec.rb:28:in `block (3 levels) in <top (required)>'[0m
+
+  4) Preference has the right fields
+     [31mFailure/Error: [0mp = [1;34;4mPreference[0m.new([35martist_sort_order[0m: [31m[1;31m"[0m[31mDESC[1;31m"[0m[31m[0m, [35msong_sort_order[0m: [31m[1;31m"[0m[31mASC[1;31m"[0m[31m[0m, [35mallow_create_artists[0m: [1;36mfalse[0m, [35mallow_create_songs[0m: [1;36mtrue[0m)[0m
+     [31m[0m
+     [31mActiveRecord::UnknownAttributeError:[0m
+     [31m  unknown attribute 'allow_create_songs' for Preference.[0m
+     [36m# ./spec/models/preference_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+     [36m# ------------------[0m
+     [36m# --- Caused by: ---[0m
+     [36m# NoMethodError:[0m
+     [36m#   undefined method `allow_create_songs=' for #<Preference:0x007fce50349100>[0m
+     [36m#   Did you mean?  allow_create_artists=[0m
+     [36m#   ./spec/models/preference_spec.rb:5:in `block (2 levels) in <top (required)>'[0m
+
+  5) settings routing routes through admin
+     [31mFailure/Error: [0mexpect([35mget[0m: [31m[1;31m"[0m[31m/admin/preferences[1;31m"[0m[31m[0m).to be_routable[0m
+     [31m  expected {:get=>"/admin/preferences"} to be routable[0m
+     [36m# ./spec/routing/preferences_routing_spec.rb:6:in `block (2 levels) in <top (required)>'[0m
+
+Finished in 0.58634 seconds (files took 1.52 seconds to load)
+[31m31 examples, 5 failures[0m
+
+Failed examples:
+
+[31mrspec ./spec/controllers/admin/preferences_controller_spec.rb:4[0m [36m# Admin::PreferencesController has an index page[0m
+[31mrspec ./spec/controllers/artists_controller_spec.rb:6[0m [36m# ArtistsController GET new redirects when access is turned off[0m
+[31mrspec ./spec/controllers/songs_controller_spec.rb:27[0m [36m# SongsController GET new redirects when access is turned off[0m
+[31mrspec ./spec/models/preference_spec.rb:4[0m [36m# Preference has the right fields[0m
+[31mrspec ./spec/routing/preferences_routing_spec.rb:5[0m [36m# settings routing routes through admin[0m
+
