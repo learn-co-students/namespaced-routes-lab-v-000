@@ -1,0 +1,9 @@
+<h1>App Preferences</h1>
+
+<% Preference.all.each do |preference| %>
+  Artist sort order: <%= preference.artist_sort_order %><br>
+  Song sort order: <%= preference.song_sort_order %><br>
+  Allow creation of new artists? <%= preference.allow_create_artists %><br>
+  Allow creation of new songs? <%= preference.allow_create_songs %><br>
+  <br>
+<% end %>
