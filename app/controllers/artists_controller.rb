@@ -1,6 +1,6 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    @artists = Artist.sort_artists
   end
 
   def show
@@ -8,7 +8,16 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if Preference.last !=nil
+      if Preference.last[:allow_create_artists] == false 
+        flash[:alert] = "You are not authorized to add a new artist."
+        redirect_to artists_path
+      else 
+        @artist = Artist.new
+      end
+    else 
+      @artist = Artist.new
+    end
   end
 
   def create
