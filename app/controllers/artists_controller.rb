@@ -1,4 +1,5 @@
 class ArtistsController < ApplicationController
+  before_action :redirect_if_not_allowed_to_create_artists, only: [:new, :create, :edit, :update, :destroy]
   def index
     @artists = Artist.all
   end

@@ -1,4 +1,5 @@
 class SongsController < ApplicationController
+  before_action :redirect_if_not_allowed_to_create_songs, only: [:new, :create, :edit, :update, :destroy]
   def index
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
@@ -67,4 +68,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
