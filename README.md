@@ -21,8 +21,7 @@ The base application has been provided with tests. Make sure to run
 already has tests, part of the job is to make sure the tests that
 already pass at the beginning still pass when you're done!
 
-1. Create a `Preference` model that will store preferences for the app. It will need
-   to have fields for:
+1. Create a `Preference` model that will store preferences for the app. It will need to have fields for:
    * Song sort order (e.g. `"ASC"` or `"DESC"`). This will be used to control the default sort order on the `/songs` page.
    * Artist sort order. This will be used to control the default sort order on the `/artists` page.
    * Allowing creation of new songs. Used to control the ability to add new songs to the system.
