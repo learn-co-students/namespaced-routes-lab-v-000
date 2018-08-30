@@ -1,4 +1,6 @@
 class ArtistsController < ApplicationController
+  before_action :preferences
+  
   def index
     @artists = Artist.all
   end
@@ -8,7 +10,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if !@preference.nil? && !@preference.allow_create_artists
+      redirect_to artists_path
+    else
+      @artist = Artist.new
+    end  
   end
 
   def create
@@ -49,4 +55,9 @@ class ArtistsController < ApplicationController
   def artist_params
     params.require(:artist).permit(:name)
   end
+
+  def preferences
+    @preference = Preference.first
+  end
+  
 end
