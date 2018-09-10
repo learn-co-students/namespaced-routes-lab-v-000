@@ -1,6 +1,15 @@
 class ArtistsController < ApplicationController
+  before_action :set_preferences, only: [:index, :new] 
+  # above means set set_preferences method to be used only on 
+  # instance methods index and new
+
   def index
-    @artists = Artist.all
+    if @preferences && @preferences.artist_sort_order
+      binding.pry
+      @artists = Artist.order(name: @preferences.artist_sort_order)
+    else
+      @artists = Artist.all
+    end
   end
 
   def show
@@ -8,7 +17,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if @preferences && !@preferences.allow_create_artists
+      redirect_to artists_path
+    else
+      @artist = Artist.new
+    end
   end
 
   def create
@@ -49,4 +62,11 @@ class ArtistsController < ApplicationController
   def artist_params
     params.require(:artist).permit(:name)
   end
+
+  # making below method private makes the variable @preference
+  # available to all instance methods of this controller
+  def set_preferences
+    @preferences = Preference.first
+  end
+
 end
