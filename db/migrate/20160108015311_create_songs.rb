@@ -1,9 +1,8 @@
 class CreateSongs < ActiveRecord::Migration
   def change
-    create_table :songs do |t|
-      t.string :title
-
-      t.timestamps null: false
+    t.string   "title"
+    t.integer  "artist_id"
+    t.index ["artist_id"], name: "index_songs_on_artist_id"
     end
   end
 end
