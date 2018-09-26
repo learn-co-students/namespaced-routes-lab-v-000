@@ -8,6 +8,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
+    perfs = Preference.first
+    if !perfs.allow_create_artists
+      redirect_to artists_path
+    end
+
     @artist = Artist.new
   end
 
