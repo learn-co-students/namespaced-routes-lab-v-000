@@ -1,5 +1,7 @@
 class Song < ActiveRecord::Base
   belongs_to :artist
+  scope :order_artist_name, -> {order(name: @preferences.artist_sort_order)}
+
 
   def artist_name
     self.try(:artist).try(:name)

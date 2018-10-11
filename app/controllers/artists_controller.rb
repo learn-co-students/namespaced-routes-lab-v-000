@@ -1,6 +1,12 @@
 class ArtistsController < ApplicationController
+  before_action :set_users_preferences, only: [:index, :show] #finds preferences in the DB
+
   def index
-    @artists = Artist.all
+    if @preferences && @preferences.artist_sort_order
+      @artists = Artist.order_artist_name
+    else
+      @artists = Artist.all
+    end
   end
 
   def show
@@ -8,7 +14,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if !@preferences || !@preferences.allow_create_artists
+      redirect_to artists_path
+    else
+      @artist = Artist.new
+    end
   end
 
   def create
@@ -45,6 +55,10 @@ class ArtistsController < ApplicationController
   end
 
   private
+
+  def set_users_preferences
+    @preferences = Preference.first
+  end
 
   def artist_params
     params.require(:artist).permit(:name)
