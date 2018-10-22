@@ -1,3 +1,4 @@
+require 'pry'
 class ArtistsController < ApplicationController
   def index
     @artists = Artist.all
@@ -8,7 +9,13 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    #binding.pry
+    @p = Preference.all.first
+    if !@p.nil? && @p.allow_create_artists == false
+      redirect_to artists_path
+    else
+      @artist = Artist.new
+    end
   end
 
   def create
