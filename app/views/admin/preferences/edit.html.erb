@@ -1,0 +1,15 @@
+<%= form_for @preference do |f| %>
+  <%= f.label :allow_create_artists %><br>
+  True <%= f.radio_button :allow_create_artists, true%>
+  False <%= f.radio_button :allow_create_artists, false%>
+  <%= f.label :allow_create_songs %><br>
+  True <%= f.radio_button :allow_create_songs, true%>
+  False <%= f.radio_button :allow_create_songs, false%>
+  <%= f.label :song_sort_order %><br>
+  DESC <%= f.radio_button :song_sort_order, "DESC"%>
+  ASC <%= f.radio_button :song_sort_order, "ASC"%>
+  <%= f.label :artist_sort_order %><br>
+  DESC <%= f.radio_button :artist_sort_order, "DESC"%>
+  ASC <%= f.radio_button :artist_sort_order, "ASC"%>
+  <%= f.submit %>
+<% end %>
