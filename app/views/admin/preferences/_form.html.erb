@@ -1,0 +1,15 @@
+<%= form_for([@preference], url: admin_preferences_path(@preference))  do |f| %>
+  <%= f.label "Allow the creation of artists?" %> <br>
+  <%= f.check_box :allow_create_artists %> <br>
+
+  <%= f.label "Allow the creation of songs?" %> <br>
+  <%= f.check_box :allow_create_songs %> <br>
+
+  <%= f.label "How to sort artists? ASC or DESC?" %> <br>
+  <%= f.text_field :artist_sort_order %> <br>
+
+  <%= f.label "How to sort songs? ASC or DESC?" %> <br>
+  <%= f.text_field :song_sort_order %> <br>
+
+  <%= f.submit %>
+<% end %>
