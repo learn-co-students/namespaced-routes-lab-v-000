@@ -1,0 +1,11 @@
+<%= form_for @preference do |f| %>
+  <%= f.label :artist_sort_order %>
+  <%= f.text_field :artist_sort_order %>
+  <%= f.label :song_sort_order %>
+  <%= f.text_field :song_sort_order %>
+  <%= f.label :allow_create_artists %>
+  <%= f.text_field :allow_create_artists %>
+  <%= f.label :allow_create_songs %>
+  <%= f.text_field :allow_create_songs %>
+
+<% end %>
