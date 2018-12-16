@@ -1,3 +1,20 @@
+
+1.) Update config/routes.rb with new route for preferences using namespace.
+ 
+2.) Create migration for preferences table. 
+a. Run rake db:migrate
+b. Run rake db:seed 
+
+3.) Create Preference model and inherit from ActiveRecord Base
+
+4.) Create preferences controller in admin directory and indclude index and udpate action as well as implement strong params. 
+
+5.) Update Artist and Song new and index controller action.  Also have before_action set preferences. 
+
+6.) Create Preference Index view under views/admin/preferences
+
+
+
 # Namespaced Routes Lab
 
 ## Objectives
