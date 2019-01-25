@@ -18,3 +18,8 @@ songs = [{artist_name: "The Killers", title: "Mr. Brightside"},
 songs.each do |song|
   Song.create(song)
 end
+
+preference = [{song_sort_order: "ASC", artist_sort_order: "ASC",
+               allow_song_creation: true, allow_artist_creation: true}]
+
+Preference.create(preference)
