@@ -1,5 +1,6 @@
 class SongsController < ApplicationController
   def index
+
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
       if @artist.nil?
@@ -25,10 +26,15 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    if Preference.last.allow_create_songs == false
+      redirect_to songs_path, alert: "You don't have permission to create new songs."
+    else
+      @song = Song.new
+    end
   end
 
   def create
+
     @song = Song.new(song_params)
 
     if @song.save
@@ -67,4 +73,3 @@ class SongsController < ApplicationController
     params.require(:song).permit(:title, :artist_name)
   end
 end
-
