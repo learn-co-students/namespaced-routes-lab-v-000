@@ -5,7 +5,7 @@ class SongsController < ApplicationController
       if @artist.nil?
         redirect_to artists_path, alert: "Artist not found"
       else
-        @songs = @artist.songs
+        @songs = @artist.songs #200 response, the request has succeeded 
       end
     else
       @songs = Song.all
@@ -24,13 +24,18 @@ class SongsController < ApplicationController
     end
   end
 
-  def new
-    @song = Song.new
-  end
+  def new  #must be authorized to create a new song, if not, redirect_to songs_path. if authorized, render :new 
+    @preference = Preference.new
+    if @preference.allow_create_songs
+       @song = Song.new
+     else 
+      redirect_to songs_path
+    end 
+  end 
+
 
   def create
     @song = Song.new(song_params)
-
     if @song.save
       redirect_to @song
     else
@@ -44,15 +49,15 @@ class SongsController < ApplicationController
 
   def update
     @song = Song.find(params[:id])
-
     @song.update(song_params)
-
     if @song.save
       redirect_to @song
     else
       render :edit
     end
   end
+
+
 
   def destroy
     @song = Song.find(params[:id])
