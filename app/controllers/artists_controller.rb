@@ -1,6 +1,10 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    if params[:artist_sort_order] == 'DESC'
+      @artists = Artist.order(name: :DESC)
+    else
+      @artists = Artist.order(:name)
+    end
   end
 
   def show
@@ -8,7 +12,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if params[:allow_artist_creation]
+      @artist = Artist.new
+    else
+      redirect_to artists_path
+    end
   end
 
   def create
