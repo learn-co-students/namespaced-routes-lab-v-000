@@ -1,4 +1,7 @@
 class ArtistsController < ApplicationController
+
+  before_action :set_preference, only: [:index, :new]
+
   def index
     @artists = Artist.all
   end
@@ -8,12 +11,15 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if @preference.allow_create_artists 
+      @artist = Artist.new
+    else
+      redirect_to artists_path
+    end
   end
 
   def create
     @artist = Artist.new(artist_params)
-
     if @artist.save
       redirect_to @artist
     else
