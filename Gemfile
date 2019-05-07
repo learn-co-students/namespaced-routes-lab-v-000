@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 
-gem 'rails', '5.0.7.1'
+gem 'rb-readline'
+gem 'rails'
+gem 'listen'
 gem 'sqlite3', '~>1.3.6'
 gem 'sass-rails', '~> 5.0'
 gem 'uglifier', '>= 1.3.0'
