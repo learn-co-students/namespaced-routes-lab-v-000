@@ -1,0 +1,13 @@
+<h1>Set Preferences</h1>
+<%= form_for @preference do |f| %>
+  <%= f.label :allow_create_by_artists %>
+  <%= f.text_field :allow_create_by_artists %><br>
+  <%= f.label :allow_create_by_songs %>
+  <%= f.text_field :allow_create_by_songs %><br>
+  <%= f.label :artist_sort_order %>
+  <%= f.check_box(:artist_sort_order, {}, true, false) %><br>
+  <%= f.label :song_sort_order %>
+  <%= f.check_box(:song_sort_order, {}, true, false) %><br>
+
+  <%= f.submit %>
+<% end %>
