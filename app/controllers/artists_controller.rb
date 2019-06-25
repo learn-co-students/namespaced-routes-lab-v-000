@@ -1,6 +1,7 @@
 class ArtistsController < ApplicationController
   def index
-    @artists = Artist.all
+    @preferences = get_preferences
+    @artists = Artist.order(name: @preferences.artist_sort_order)
   end
 
   def show
@@ -8,7 +9,13 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    @preferences = get_preferences
+
+    if @preferences.allow_create_artists
+      @artist = Artist.new
+    else
+      redirect_to artists_path, alert: "This action is not allowed"
+    end
   end
 
   def create
