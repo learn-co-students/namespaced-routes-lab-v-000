@@ -8,7 +8,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if Preference.first.allow_create_artists
+      @artist = Artist.new
+    else
+      redirect_to artists_path, status: 301
+    end
   end
 
   def create
