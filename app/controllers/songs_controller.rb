@@ -1,4 +1,9 @@
 class SongsController < ApplicationController
+
+  # new code start
+  before_action :set_preferences, only: [:index, :new]
+  # new code end
+
   def index
     if params[:artist_id]
       @artist = Artist.find_by(id: params[:artist_id])
@@ -25,7 +30,17 @@ class SongsController < ApplicationController
   end
 
   def new
-    @song = Song.new
+    # deleted code
+    # @song = Song.new
+
+    # new code start
+    if @preferences && !@preferences.allow_create_songs
+      redirect_to songs_path
+    else
+      @song = Song.new
+    end
+    # new code end
+
   end
 
   def create
@@ -66,5 +81,11 @@ class SongsController < ApplicationController
   def song_params
     params.require(:song).permit(:title, :artist_name)
   end
-end
 
+  # new code start
+  def set_preferences
+    @preferences = Preference.first
+  end
+  # new code end
+
+end
