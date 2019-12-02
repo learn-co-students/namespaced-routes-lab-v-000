@@ -7,8 +7,15 @@ class ArtistsController < ApplicationController
     @artist = Artist.find(params[:id])
   end
 
+  # redirects when access is turned off
   def new
-    @artist = Artist.new
+    @preference = Preference.first
+    if @preference.allow_create_artists # check that creating new artists is enabled
+      @artist = Artist.new
+    else # redirect if that preference is disabled
+      #binding.pry
+      redirect_to artists_path
+    end
   end
 
   def create
