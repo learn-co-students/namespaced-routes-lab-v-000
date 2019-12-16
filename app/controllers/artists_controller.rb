@@ -8,7 +8,12 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    @preference = Preference.first
+    if @preference.allow_create_artists
+      @artist = Artist.new
+    else
+      redirect_to artists_path, alert: "Access denied"
+    end
   end
 
   def create
