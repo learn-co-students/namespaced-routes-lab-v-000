@@ -2,6 +2,7 @@
 
 ## Objectives
 
+
 1. Organize controllers using a module.
 2. Use namespaced routes.
 
