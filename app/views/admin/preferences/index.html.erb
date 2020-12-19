@@ -1,0 +1,10 @@
+<h1> Application Preferences </h1>
+
+<%= form_for(@preference, url: admin_preference_path(@preference)) do |f| %>
+<h4> Allow the creation of songs? </h4>
+<%= f.check_box :allow_create_songs %>
+<h4> Allow the creation of artists? </h4>
+<%= f.check_box :allow_create_artists %>
+<br>
+<%= f.submit %>
+<% end %>

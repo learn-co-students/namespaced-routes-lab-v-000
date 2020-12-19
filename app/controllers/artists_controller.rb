@@ -8,7 +8,11 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new
+    if preference.allow_create_artists
+      @artist = Artist.new
+    else
+      redirect_to(artists_path, alert: "No artist creation allowed. If you believe this to be a mistake, then contact your face.")
+    end
   end
 
   def create
@@ -45,7 +49,9 @@ class ArtistsController < ApplicationController
   end
 
   private
-
+  def preference
+    @preference ||= Preference.all.first
+  end
   def artist_params
     params.require(:artist).permit(:name)
   end
