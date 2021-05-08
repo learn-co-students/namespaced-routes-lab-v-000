@@ -1,2 +1,2 @@
-#class Preference
-#end
+class Preference < ApplicationRecord
+end
